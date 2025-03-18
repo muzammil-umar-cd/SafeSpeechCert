@@ -75,19 +75,23 @@
                 <div class="container">
                     <div class="explore_bar displayFor_tablet  before-cg-wallet">
                         <div id="explore-button"><span class="explore-category-menu" title="Explore"></span></div>
-                    </div><a href="/" class="logo" title="SafeSpeechCert"><img width="105" height="48"
-                            src="logossc.png" alt="SafeSpeechCert" /></a>
+                    </div><a href="/" class="logo" title="SafeSpeechCert"><img width="105" height="48" src="logossc.png"
+                            alt="SafeSpeechCert" /></a>
                     <nav class="links-right">
                         <div class="explore_bar displayFor_desktop before-login-explore before-cg-wallet">
                             <div id="explore-button"><span class="explore-category-menu"
                                     title="Explore"><span>Explore</span></span></div>
                         </div>
                         <div class="search_bar">
-                            <form name="skillup-search-tag" action="/skillup-search"><input type="hidden" name="sortBy"
-                                    value="Relevance" /><input type="search" id="searchSkillUp" name="tag"
-                                    autoComplete="off" placeholder="Track your certification here.." /><button
-                                    type="submit" class="input-search-btn" title="search"><span
-                                        class="search_icon input-search-icon"></span></button></form>
+                            <form name="skillup-search-tag" action="certificaiton-search" method="get">
+
+                                <input type="search" id="certificaiton-search" name="tag" autoComplete="off"
+                                    placeholder="Track your certification here.." />
+
+                                <button type="submit" class="input-search-btn" title="search">
+                                    <span class="search_icon input-search-icon"></span>
+                                </button>
+                            </form>
                         </div>
                         <div class="search_icon_mobile"><button id="skillup-search-button" class="input-search-btn"
                                 title="search"><span class="search_icon input-search-icon"></span></button>
@@ -99,10 +103,15 @@
                                             <span class="search_icon input-search-icon"></span>
                                         </button>
                                     </div>
-                                    <input autoComplete="off" type="text" id="searchSkillUpMobile" name="tag" placeholder="What do you want to learn?" />
+
+                                    <input autoComplete="off" type="text" id="searchSkillUpMobile" name="tag"
+                                        placeholder="Track your certification here.." />
+
                                     <div class="main_close_icon">
                                         <span class="close_icon input-close-icon">
-                                            <img class="lazy" src="ice9/assets/form_opacity.png" data-src="ice9/assets/close-icon.svg" width="11" height="11" alt="Close" />
+                                            <img class="lazy" src="ice9/assets/form_opacity.png"
+                                                data-src="ice9/assets/close-icon.svg" width="11" height="11"
+                                                alt="Close" />
                                         </span>
                                     </div>
                                 </form>
