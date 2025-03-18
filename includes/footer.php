@@ -59,9 +59,9 @@
                     <ul class="simpli_terms">
                         <li><a href="terms-and-conditions#terms-and-conditions" rel="nofollow"
                                 title="Terms and Conditions">Terms and Conditions</a></li>
-                        <li><a href="terms-and-conditions#privacy-policy" rel="nofollow" title="Privacy Policy">Privacy
+                        <li><a href="javascript:;" rel="nofollow" title="Privacy Policy">Privacy
                                 Policy</a></li>
-                        <li><a href="terms-and-conditions#refund-policy" rel="nofollow" title="Refund Policy">Refund
+                        <li><a href="javascript:;" rel="nofollow" title="Refund Policy">Refund
                                 Policy</a></li>
                         <li class="copy_rights copy_address"></li>
                         <li class="copy_rights">© 2009-

@@ -1644,7 +1644,7 @@ header .sign-up-login {
   font-weight: 400;
   border-radius: 5px;
   padding: 0 20px;
-  width: 90px;
+  width: 116px;
 }
 
 header .sign-up-login:hover {
@@ -2146,7 +2146,7 @@ header .search_icon_mobile {
   }
 
   header .login {
-    width: 70px;
+    width: 116px;
     line-height: 30px;
   }
 
@@ -2524,11 +2524,11 @@ header .search_icon_mobile {
   }
 
   header .sign-up-login {
-    width: 100px;
+    width: 116px;
   }
 
   header .login {
-    width: 100px;
+    width: 116px;
   }
 
   header .explore_bar.before-login-explore + .search_bar {

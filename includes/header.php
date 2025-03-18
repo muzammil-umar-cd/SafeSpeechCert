@@ -93,7 +93,7 @@
                                 </button>
                             </form>
                         </div>
-                        <div class="search_icon_mobile"><button id="skillup-search-button" class="input-search-btn"
+                        <!-- <div class="search_icon_mobile"><button id="skillup-search-button" class="input-search-btn"
                                 title="search"><span class="search_icon input-search-icon"></span></button>
                             <div class="search" id="skillup-search-form">
                                 <form name="skillup-search-tag-mobile" action="/skillup-search">
@@ -116,12 +116,14 @@
                                     </div>
                                 </form>
                             </div>
-                        </div><a
-                            href="?utm_source=SkillUp_HomePage&amp;utm_medium=skillup_home&amp;utm_campaign=signup_top_fold"
+                        </div> -->
+                        <a
+                            href="javascript:;"
                             class="sign-up-login" title="Sign-up">
-                            <!-- -->Sign up
+                            <!-- -->Get a Quote
                             <!-- -->
-                        </a><a href="" class="login" title="Log in">Log in</a>
+                        </a>
+                        <a href="tel:(123) 123-1234" class="login" title="Call Now">(123) 123-1234</a>
                     </nav>
                 </div>
             </header>
