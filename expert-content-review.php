@@ -311,7 +311,6 @@ $merchants = $get_merchants->fetch_assoc();
     </div>
 </div>
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/dropzone/5.9.3/dropzone.min.js"></script>
 <?php include("includes/footer.php"); ?>
 <script>
     $(document).ready(function() {
