@@ -313,7 +313,6 @@ $merchants = $get_merchants->fetch_assoc();
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/dropzone/5.9.3/dropzone.min.js"></script>
 <?php include("includes/footer.php"); ?>
-<script src="static-frs/js/functions.js"></script>
 <script>
     $(document).ready(function() {
         var current_fs, next_fs, previous_fs; //fieldsets

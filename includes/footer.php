@@ -82,6 +82,7 @@
 </footer>
 
 <link rel="stylesheet" type="text/css" href="static-frs/css/skill-up-page.4kg59l99b1.css" />
+<script src="static-frs/js/functions.js"></script>
 <script defer src="static-frs/js/skill-up.4kg59l99b1.js"></script>
 <script defer src="static-frs/js/vendor.4kg59l99b1.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
