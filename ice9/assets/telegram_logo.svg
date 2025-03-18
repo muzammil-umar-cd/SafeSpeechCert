@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="17px" height="15px" viewBox="0 0 17 15" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>Group 77</title>
+    <defs>
+        <linearGradient x1="66%" y1="43.7%" x2="85.1%" y2="80.2%" id="linearGradient-1">
+            <stop stop-color="#EFF7FC" offset="0%"/>
+            <stop stop-color="#FFFFFF" offset="100%"/>
+        </linearGradient>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Group-77" transform="translate(0.726316, 0.924747)" fill-rule="nonzero">
+            <path d="M5.90509839,12.3705335 C5.43732339,12.3705335 5.51684995,12.1939147 5.35551089,11.7485179 L3.98009839,7.22200067 L14.5675984,0.940845985" id="Path" fill="#C8DAEA"/>
+            <path d="M5.90509839,12.3705335 C6.26603589,12.3705335 6.42544995,12.2054647 6.62697339,12.009596 L8.55197339,10.1377741 L6.15077651,8.68981317" id="Path" fill="#A9C9DD"/>
+            <path d="M6.15053589,8.69017411 L11.9688484,12.9888194 C12.6328531,13.355171 13.1119374,13.1654382 13.2773671,12.3724585 L15.6457187,1.21191005 C15.8881484,0.239785048 15.2751562,-0.201280577 14.6399062,0.0871084854 L0.732984323,5.44955692 C-0.216281302,5.83034599 -0.210626614,6.35996161 0.559974948,6.59589442 L4.12880464,7.70986786 L12.3910249,2.4973288 C12.7810781,2.26079442 13.1391281,2.38784442 12.8453249,2.64868192" id="Path" fill="url(#linearGradient-1)"/>
+        </g>
+    </g>
+</svg>

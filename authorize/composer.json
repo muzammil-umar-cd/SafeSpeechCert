@@ -1,0 +1,6 @@
+{
+    "require": {
+        "authorizenet/authorizenet": "^1.9",
+        "phpmailer/phpmailer": "^6.9"
+    }
+}
