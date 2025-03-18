@@ -85,7 +85,7 @@
                                     title="Explore"><span>Explore</span></span></div>
                         </div>
                         <div class="search_bar">
-                            <form name="skillup-search-tag" action="certificaiton-search" method="get">
+                            <form name="skillup-search-tag" action="certificaiton-search.php" method="get">
 
                                 <input type="search" id="certificaiton-search" name="tag" autoComplete="off"
                                     placeholder="Track your certification here.." />

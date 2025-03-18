@@ -9,9 +9,9 @@
                 </h1>
             </div>
             <div class="container cta-container">
-                <div> <a href="expert-content-review" class="btn">Expert Content Review</a></div>
+                <div> <a href="expert-content-review.php" class="btn">Expert Content Review</a></div>
                 <div class="new-cta">
-                    <p>Not sure where to get started?</p><a href="contact" class="btn get-recom-btn rec-before-login">Contact
+                    <p>Not sure where to get started?</p><a href="contact.php" class="btn get-recom-btn rec-before-login">Contact
                         Support</a>
                 </div>
             </div>
@@ -58,7 +58,7 @@
                             <div class="extra-block"></div>
                             <div class="left-block">
                                 <p>Let’s find the right expert for you!</p>
-                                <a href="contact" class="get-recommendation-btn">Contact Support</a>
+                                <a href="contact.php" class="get-recommendation-btn">Contact Support</a>
                             </div>
                             <div class="right-block lazy"></div>
                         </div>
@@ -85,8 +85,8 @@
                 <div class="google-play-app">
                     <div id="ct-btn">
                         <div>
-                            <a href="expert-content-review" class="btn">Expert Content Review</a>
-                            <a href="contact" class="btn get-recom-btn rec-before-login">Contact Support</a>
+                            <a href="expert-content-review.php" class="btn">Expert Content Review</a>
+                            <a href="contact.php" class="btn get-recom-btn rec-before-login">Contact Support</a>
                         </div>
                     </div>
                 </div>
@@ -101,7 +101,7 @@
                         <h2>Guarantee <span>Responsible & Unbiased</span> Content</h2>
                         <h5>Get your content reviewed for accuracy, fairness, and inclusivity. </h5>
                         <div class="slh-btn" id="get-a-quote-banner">
-                            <a href="expert-content-review" class="btn">Expert Content Review</a>
+                            <a href="expert-content-review.php" class="btn">Expert Content Review</a>
                         </div>
                     </div>
                     <div class="slhBanner-img"><img src="ice9/assets/SLH-digital-library-img.png"

@@ -34,8 +34,8 @@
                     <div class="col-md-3 pt-5 ql">
                         <h4 class="pb-3">Discover</h4>
                         <ul>
-                            <li><a href="expert-content-review">Expert Content Review</a></li>
-                            <li><a href="contact">Contact Support</a></li>
+                            <li><a href="expert-content-review.php">Expert Content Review</a></li>
+                            <li><a href="contact.php">Contact Support</a></li>
                         </ul>
                     </div>
                     <div class="col-md-3 pt-5 ql">

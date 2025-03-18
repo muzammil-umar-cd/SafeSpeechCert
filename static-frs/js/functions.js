@@ -10,7 +10,7 @@ Dropzone.autoDiscover = false;
 var uploadedFiles = [];
 
 var myDropzone = new Dropzone("#dropzone", {
-  url: "upload",
+  url: "upload.php",
   autoProcessQueue: false,
   uploadMultiple: true,
   parallelUploads: 10,
@@ -362,7 +362,7 @@ $(document).ready(function () {
           formData.append("docFiles", $("#docFiles").val());
 
           $.ajax({
-            url: "process_transaction",
+            url: "process_transaction.php",
             type: "POST",
             data: formData,
             processData: false,
@@ -588,7 +588,7 @@ $(document).ready(function () {
       formData.append("m_cvc", $("#m_cvc").val());
 
       $.ajax({
-        url: "process_transaction",
+        url: "process_transaction.php",
         type: "POST",
         data: formData,
         processData: false,
