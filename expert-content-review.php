@@ -6,8 +6,6 @@ $get_merchants = $conn->query("SELECT * FROM merchants where status = 'Active'")
 $merchants = $get_merchants->fetch_assoc();
 
 ?>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.2.3/animate.min.css">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/dropzone/5.9.3/dropzone.min.css">
 
 
 <div id="skillupBanner" class="skillup-home-static-banner">
