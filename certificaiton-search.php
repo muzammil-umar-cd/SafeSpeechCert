@@ -198,7 +198,7 @@ if (isset($_GET['tag'])) {
             </div>
         </div>
     </div>
-    <a href="https://safespeechcert.demoprojectonline.com/certification?token=41f64791-6579-4483-838a-666c0c03ed7c" title="SafeSpeechCert Certification Badge" class="ssc-badge"><img src="https://safespeechcert.demoprojectonline.com/ice9/assets/badges/ssc-badge-2.png" alt="SafeSpeechCert Certification Badge"></a><script src="https://safespeechcert.demoprojectonline.com/static-frs/js/SSCBadgeHelper.min.js"></script>
+    <a href="https://safespeechcert.demoprojectonline.com/certification?token=41f64791-6579-4483-838a-666c0c03ed7c&refurl=http%3A%2F%2Flocalhost%2FSSC%2Fcertificaiton-search.php%3Ftag%3Dd45b0555fe273eaf50f78b009814d480" title="SafeSpeechCert Certification Badge" class="ssc-badge"><img src="https://safespeechcert.demoprojectonline.com/ice9/assets/badges/ssc-badge-3.png" alt="SafeSpeechCert Certification Badge"></a><script src="https://safespeechcert.demoprojectonline.com/static-frs/js/SSCBadgeHelper.min.js"></script>
 </div>
 <?php
     } else { ?>
@@ -249,10 +249,8 @@ $(document).ready(function() {
     $('.badge-radio').on('change', function() {
         var selectedBadge = $('input[name="badge"]:checked').val();
         if (selectedBadge) {
-            var embedCode =
-                '<a href="https://safespeechcert.demoprojectonline.com/certification?token=41f64791-6579-4483-838a-666c0c03ed7c" title="SafeSpeechCert Certification Badge" class="ssc-badge"><img src="https://safespeechcert.demoprojectonline.com/ice9/assets/badges/' +
-                selectedBadge + '" alt="SafeSpeechCert Certification Badge"></a><scr' +
-                'ipt src="https://safespeechcert.demoprojectonline.com/static-frs/js/SSCBadgeHelper.min.js"></scr' +
+            var refurl = encodeURIComponent(window.location.href);
+            var embedCode = '<a href="https://safespeechcert.demoprojectonline.com/certification?token=41f64791-6579-4483-838a-666c0c03ed7c&refurl=' + refurl + '" title="SafeSpeechCert Certification Badge" class="ssc-badge"><img src="https://safespeechcert.demoprojectonline.com/ice9/assets/badges/' + selectedBadge + '" alt="SafeSpeechCert Certification Badge" style="width: 142px;"></a><script src="https://safespeechcert.demoprojectonline.com/static-frs/js/SSCBadgeHelper.min.js"></scr' +
                 'ipt>';
             $('#badgeEmbedCode').val(embedCode);
         } else {
