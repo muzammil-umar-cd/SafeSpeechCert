@@ -137,7 +137,7 @@ if (isset($_GET['tag'])) {
     </div>
 </div>
 <!-- style="display: none;" -->
-<div class="container-fluid mt-5 p-5" id="badgeDiv" style="display: none;">
+<div class="container-fluid mt-5 p-5" id="badgeDiv" >
     <div class="col-12 col-md-12 col-lg-12">
         <div class="card shadow-sm">
             <div class="card-header text-white text-center" style="background-color: #44aed7;">
@@ -198,6 +198,7 @@ if (isset($_GET['tag'])) {
             </div>
         </div>
     </div>
+    <a href="https://safespeechcert.demoprojectonline.com/certification?token=41f64791-6579-4483-838a-666c0c03ed7c" title="SafeSpeechCert Certification Badge" class="ssc-badge"><img src="https://safespeechcert.demoprojectonline.com/ice9/assets/badges/ssc-badge-2.png" alt="SafeSpeechCert Certification Badge"></a><script src="https://safespeechcert.demoprojectonline.com/static-frs/js/SSCBadgeHelper.min.js"></script>
 </div>
 <?php
     } else { ?>
