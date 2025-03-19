@@ -18,7 +18,8 @@
                             </div>
                             <div class="col-md-12 pt-3">
                                 <p style="font-size: 13px;">
-                                    At SafeSpeechCert, we promote respectful communication. Our services help ensure your content is free from hate speech and offensive language.
+                                    At SafeSpeechCert, we promote respectful communication. Our services help ensure
+                                    your content is free from hate speech and offensive language.
                                 </p>
                             </div>
                         </div>
@@ -26,7 +27,7 @@
                     <div class="col-md-3 pt-5 ql">
                         <h4 class="pb-3">Quick Links</h4>
                         <ul>
-                            <li><a href="/" >Home</a></li>
+                            <li><a href="/">Home</a></li>
                             <li><a href="javascript:;" title="Coming Soon">About Us</a></li>
                             <li><a href="javascript:;" title="Coming Soon">Contact Us</a></li>
                         </ul>

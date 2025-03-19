@@ -72,7 +72,6 @@
 <body class="body">
     <div>
         <div class="skill-up">
-            <div id="IntroJS"></div>
             <header id="topHeader" from="skillUpHome">
                 <div class="container">
                     <div class="explore_bar displayFor_tablet  before-cg-wallet">
