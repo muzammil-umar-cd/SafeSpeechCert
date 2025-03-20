@@ -14,7 +14,7 @@ if (isset($_GET['token'])) {
         $wordCounts = json_decode($order['word_count'], true);
         $prices = json_decode($order['price'], true);
 ?>
-
+<input type="hidden" id="token_no" value="<?php echo $order['tracking_no']; ?>">
 <div class="container-fluid mt-5 p-5" id="trackingDiv">
     <div class="row justify-content-center">
         <div class="col-12 col-md-12 col-lg-12">
@@ -24,8 +24,14 @@ if (isset($_GET['token'])) {
                         <div class="middle-certificate-container">
                             <div class="inner-certificate-container">
                                 <div class="left-container on-large red-bg">
-                                    <img src="ice9/assets/badges/Stamp.svg" alt="verified-badge" class="badge"
-                                        style="display: block;position: relative;left: 50px;">
+                                    <div id="canvas-container" style="position: relative; display: inline-block;">
+                                        <img src="Stamp.png" id="image" alt="Image" width="300px" />
+                                        <div id="qr-code"
+                                            style="position: absolute; top: 47%; left: 50%; transform: translate(-50%, -50%);">
+                                        </div>
+                                    </div>
+                                    <!-- <img src="ice9/assets/badges/Stamp.svg" alt="verified-badge" class="badge"
+                                        style="display: block;position: relative;left: 50px;"> -->
                                     <p class="progress-msg" style="display: block;">Checking protection status...</p>
                                     <div class="page-status">
                                         <div>
@@ -1353,3 +1359,37 @@ if (isset($_GET['token'])) {
 
 
 <?php include('includes/footer.php'); ?>
+
+<script src="https://cdn.jsdelivr.net/gh/davidshimjs/qrcodejs/qrcode.min.js"></script>
+<!-- Use the latest stable version of html2canvas from cdnjs -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+<script>
+$(document).ready(function() {
+    $token_no = $('#token_no').val();
+
+    $("#qr-code").html("");
+
+    var qrcode = new QRCode("qr-code", {
+        text: "https://safespeechcert.demoprojectonline.com/certification?token=" +
+            $token_no,
+        width: 60,
+        height: 60
+    });
+
+    $("#download-btn").click(function() {
+
+        html2canvas(document.getElementById("canvas-container"), {
+            useCORS: true,
+            backgroundColor: null
+        }).then(function(canvas) {
+
+            var link = document.createElement('a');
+            link.download = 'image_with_qr.png';
+            link.href = canvas.toDataURL("image/png");
+            link.click();
+        }).catch(function(error) {
+            console.error("Error generating canvas:", error);
+        });
+    });
+});
+</script>
