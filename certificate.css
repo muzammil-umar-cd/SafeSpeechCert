@@ -907,7 +907,7 @@ a#compliance-status:hover {
 }
 
 .red-bg {
-  background-color: rgb(18 149 206 / 10%);
+  background-color: rgb(0 0 0 / 13%);
   border: 1px dashed rgb(18 165 206 / 20%);
   margin-bottom: 10px;
 }

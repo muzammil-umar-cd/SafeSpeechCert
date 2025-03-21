@@ -48,13 +48,11 @@ if (isset($_GET['tag'])) {
         <div class="container heading text-center">
             <h1 class="ban-header">Order Details (<?php echo $order['name']; ?>)</h1>
             <?php
-                    $or_status = $order['status'];
-                    $get_status = "Select * from order_statuses WHERE id= $or_status";
-                    $qr = mysqli_query($conn, $get_status);
-                    $rs = mysqli_fetch_assoc($qr);
-                    ?>
-            <p class="text-warning">
-
+                $or_status = $order['status'];
+                $get_status = "Select * from order_statuses WHERE id= $or_status";
+                $qr = mysqli_query($conn, $get_status);
+                $rs = mysqli_fetch_assoc($qr);
+            ?>
             </p>
             <p class="lead p-4" style="text-transform: uppercase;">
                 Order Status: &nbsp;
@@ -69,7 +67,7 @@ if (isset($_GET['tag'])) {
 
 <div class="container-fluid mt-2 p-5" id="trackingDiv">
     <div class="row justify-content-center">
-        <div class="col-6 col-md-6 col-lg-6">
+        <div class="col-md-6 col-lg-6 col-sm-12">
             <div class="card shadow-sm">
                 <div class="card-header text-white text-center" style="background-color: #44aed7;">
                     <input type="hidden" id="token_no" value="<?php echo $order['tracking_no']; ?>">
@@ -100,14 +98,17 @@ if (isset($_GET['tag'])) {
                             </p>
                         </div>
                     </div>
-                    <h4 class="mt-4">Files</h4>
-                    <table class="table table-bordered">
+                    <div class="card-header text-white text-center mt-4" style="background-color: #44aed7;">
+                        <input type="hidden" id="token_no" value="<?php echo $order['tracking_no']; ?>">
+                        <h3>Files</h3>
+                    </div>
+                    <!-- <h4 class="mt-4"></h4> -->
+                    <table class="table table-bordered table-responsive">
                         <thead class="thead-light">
                             <tr>
                                 <th>File Name</th>
                                 <th>Word Count</th>
                                 <th>Status</th>
-                                <th>Download</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -117,7 +118,6 @@ if (isset($_GET['tag'])) {
                                         echo "<td>" . basename($filePaths[$i]) . "</td>";
                                         echo "<td>" . $wordCounts[$i] . "</td>";
                                         echo "<td>" . $rs['name'] . "</td>";
-                                        echo "<td><a href='" . $filePaths[$i] . "' download class='btn btn-primary btn-sm'>Download</a></td>";
                                         echo "</tr>";
                                     }
                                     ?>
@@ -134,16 +134,16 @@ if (isset($_GET['tag'])) {
                 </div>
             </div>
         </div>
-        <div class="col-6 col-md-6 col-lg-6">
+        <div class="col-md-6 col-lg-6 col-sm-12">
             <div class="card shadow-sm">
                 <div class="card-header text-white text-center" style="background-color: #44aed7;">
                     <h3><strong>Get Your Protection Badge</h3>
                 </div>
                 <div class="card-body p-2">
-                    <div class="row p-3">
+                    <div class="row p-2">
                         <div class="col-md-6 pr-2">
                             <h4>1. Select a Badge</h4>
-                            <div class="row" style="height: 200px;overflow-y: scroll;">
+                            <div class="row" style="height: 185px;overflow-y: scroll;">
                                 <div class="col-md-6 p-3 badge-container">
                                     <input type="radio" id="badge1" name="badge" value="ssc-badge-1.png"
                                         class="badge-radio">
@@ -216,16 +216,7 @@ if (isset($_GET['tag'])) {
                                 </div>
                             </div>
                         </div>
-                        <div class="col-md-6">
-                            <div class="row">
-                                <div class="col-md-12">
-                                    <h4>2. Embed Your Badge</h4>
-                                    <textarea readonly name="" id="badgeEmbedCode" rows="5"
-                                        style="background: ghostwhite;height: auto;border: 1px solid #dbdbdb;"></textarea>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-12 d-flex justify-content-center">
+                        <div class="col-md-6 d-flex justify-content-center">
                             <div id="canvas-container" style="position: relative; display: inline-block;">
                                 <img src="Stamp.png" id="image" alt="Image" width="400px" />
                                 <div id="qr-code"
@@ -233,8 +224,21 @@ if (isset($_GET['tag'])) {
                                 </div>
                             </div>
                         </div>
-                        <div class="col-md-12 d-flex justify-content-center">
-                            <button id="download-btn" class="btn btn-primary">Download Badge</button>
+                        <div class="col-md-6">
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <h4>2. Embed Your Badge</h4>
+                                    <textarea readonly name="" id="badgeEmbedCode" rows="2"
+                                        style="background: ghostwhite;height: auto;border: 1px solid #dbdbdb;"></textarea>
+                                </div>
+                            </div>
+                        </div>                        
+                        <div class="col-md-6 d-flex justify-content-center">
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <button id="download-btn" class="btn btn-primary">Download Badge</button>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -323,8 +327,8 @@ $(document).ready(function() {
     var qrcode = new QRCode("qr-code", {
         text: "https://safespeechcert.demoprojectonline.com/certification?token=" +
             $token_no,
-        width: 80,
-        height: 80
+        width: 70,
+        height: 70
     });
 
     $("#download-btn").click(function() {
