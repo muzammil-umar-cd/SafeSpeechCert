@@ -2,13 +2,8 @@
 <html lang="en-US">
 
 <head>
-    <script src="https://cdn.jsdelivr.net/npm/react@18.2.0/umd/react.production.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/react-dom@18.2.0/umd/react-dom.production.min.js">
-    </script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/redux/4.2.1/redux.min.js">
-    </script>
-    <script src="https://cdn.jsdelivr.net/npm/react-redux@8.0.5/dist/react-redux.min.js">
-    </script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
 
 
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
@@ -16,49 +11,22 @@
     <title>Content Review with Certificates | SafeSpeechCert</title>
 
     <link rel="shortcut icon" href="static/frontend/images/favicon.png" />
-    <link rel="icon" href="static/frontend/images/favicon/favicon.ico" />
-    <link rel="apple-touch-icon" sizes="152x152" href="static/frontend/images/favicon/apple-touch-icon-152x152.png" />
-    <link rel="apple-touch-icon" sizes="120x120" href="static/frontend/images/favicon/apple-touch-icon-120x120.png" />
-    <link rel="apple-touch-icon" sizes="76x76" href="static/frontend/images/favicon/apple-touch-icon-76x76.png" />
-    <link rel="apple-touch-icon" sizes="60x60" href="static/frontend/images/favicon/apple-touch-icon-60x60.png" />
-    <meta name="msapplication-TileColor" content="#da532c" />
-    <meta name="msapplication-TileImage" content="/mstile-144x144.png" />
     <meta name="theme-color" content="#ffffff" />
-    <link rel="alternate" type="application/rss+xml" href="feed/" title="SafeSpeechCert Updates" />
-
-
     <meta name="description"
         content="Discover top free courses online with certificates by SafeSpeechCert to enhance your skills and boost your career. Unlock your potential with best certifications!">
-
     <meta name="keywords"
         content="Free Courses Online with Certificates, Best Free Courses Online with Certificates, Free Online Courses with Certificate, free online courses, Free Online Courses with Certificates, SafeSpeechCert, SafeSpeechCert by SafeSpeechCert" />
-    <meta property="og:locale" content="en-US" />
-    <meta property="og:site_name" content="SafeSpeechCert.com" />
-    <meta property="og:url" content="SafeSpeechCert-free-online-courses">
-    <meta property="og:title" content="Free Courses Online with Certificates | SafeSpeechCert">
-    <meta property="og:description"
-        content="Discover top free courses online with certificates by SafeSpeechCert to enhance your skills and boost your career. Unlock your potential with best certifications!">
-    <meta property="og:image" content="ice9/assets/freemium/SafeSpeechCert-logo.svg">
-    <meta property="og:type" content="website">
-    <meta name="twitter:card" content="app" />
-
-    <meta name="twitter:site:id" content="@SafeSpeechCert" />
-    <meta name="twitter:creator" content="@SafeSpeechCert" />
-    <meta property="twitter:app:name:iphone" content="SafeSpeechCert" />
-    <meta property="twitter:app:id:iphone" content="963042747" />
-    <meta property="twitter:app:name:ipad" content="SafeSpeechCert" />
-    <meta property="twitter:app:id:ipad" content="963042747" />
-    <meta property="twitter:app:name:googleplay" content="SafeSpeechCert" />
-    <meta property="twitter:app:id:googleplay" content="com.mobile.SafeSpeechCert" />
-    <meta name="twitter:url" content="SafeSpeechCert-free-online-courses">
-    <meta name="twitter:site" content="@SafeSpeechCert" />
-    <meta name="twitter:title" content="Free Courses Online with Certificates | SafeSpeechCert">
-    <meta name="twitter:description"
-        content="Discover top free courses online with certificates by SafeSpeechCert to enhance your skills and boost your career. Unlock your potential with best certifications!">
-    <meta name="twitter:image" content="ice9/assets/freemium/SafeSpeechCert-logo.svg">
 
 
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+
+    <script src="https://cdn.jsdelivr.net/npm/react@18.2.0/umd/react.production.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/react-dom@18.2.0/umd/react-dom.production.min.js">
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/redux/4.2.1/redux.min.js">
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/react-redux@8.0.5/dist/react-redux.min.js">
+    </script>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.0.3/css/font-awesome.css">
     <link rel="stylesheet" href="inline-css.css" />
