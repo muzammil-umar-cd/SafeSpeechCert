@@ -14,7 +14,7 @@
                     <div class="col-md-3 pt-5">
                         <div class="row">
                             <div class="col-md-12">
-                                <img src="logossc.png" alt="">
+                                <img src="safespeechcert.png" alt="">
                             </div>
                             <div class="col-md-12 pt-3">
                                 <p style="font-size: 13px;">
