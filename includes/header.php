@@ -41,7 +41,7 @@
                 <div class="container">
                     <div class="explore_bar displayFor_tablet  before-cg-wallet">
                         <div id="explore-button"><span class="explore-category-menu" title="Explore"></span></div>
-                    </div><a href="/" class="logo" title="SafeSpeechCert"><img width="105" height="48" src="logossc.png"
+                    </div><a href="/" class="logo" title="SafeSpeechCert"><img width="105" height="48" src="safespeechcert.png"
                             alt="SafeSpeechCert" /></a>
                     <nav class="links-right">
                         <div class="explore_bar displayFor_desktop before-login-explore before-cg-wallet">
