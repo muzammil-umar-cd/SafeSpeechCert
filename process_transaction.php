@@ -45,7 +45,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $prices = [];
 
         foreach ($fileDetails as $index => $file) {
-            $file_name = $email . "-" . date("dmyhis") . "-" . $file["fileName"];
+            $file_name = date("dmyhis") . "-" . $file["fileName"];
             $file_tmp = $_FILES["file"]["tmp_name"][$index];
             $upload_dir = "uploads/";
 
