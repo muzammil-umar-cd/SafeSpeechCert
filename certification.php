@@ -143,11 +143,11 @@ if (isset($_GET['token'])) {
                                         <p class="statement-protection">
                                             <p style="color: #fff;"><span>Type Of Content:</span>&nbsp;
                                             <?php
-        $contentTypes = explode(',', $cert['content_type']);
-        foreach ($contentTypes as $contentType) {
-            echo '<span style="cursor: pointer;background: #8c8484; padding: 2px 4px; border-radius: 2px; margin-right: 5px;">' . trim($contentType) . '</span>';
-        }
-        ?>
+                                                $contentTypes = explode(',', $cert['content_type']);
+                                                foreach ($contentTypes as $contentType) {
+                                                    echo '<span style="cursor: pointer;background: #8c8484; padding: 2px 4px; border-radius: 2px; margin-right: 5px;">' . trim($contentType) . '</span>';
+                                                }
+                                            ?>
                                             </p>
                                         </p>
                                         <?php }else{ ?>
