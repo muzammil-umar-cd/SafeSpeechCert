@@ -139,7 +139,7 @@ if (isset($_GET['token'])) {
                                         <?php } ?>
 
                                         <p class="statement-protection">
-                                        <?php if(isset(($cert['content_type']))) { ?>
+                                        <?php if(isset($cert['content_type']) && $cert['content_type'] != '') { ?>
                                         <p class="statement-protection">
                                             <p style="color: #fff;"><span>Type Of Content:</span>&nbsp;
                                             <?php
