@@ -2608,7 +2608,7 @@ header .search_icon_mobile {
 }
 
 .skillup-home-static-banner .banner {
-  background: url("ice9/assets/freemium/freemium-banner.jpg");
+  background: url("ice9/assets/freemium/banner-bg.jpg");
   padding: 80px 0 56px 0;
   color: #fff;
 }
@@ -2933,7 +2933,7 @@ header .search_icon_mobile {
 @media (max-width: 767px) {
   .skillup-home-static-banner .banner {
     margin-top: 64px;
-    background: url("ice9/assets/freemium/freemium-banner.jpg");
+    background: url("ice9/assets/freemium/banner-bg.jpg");
   }
 
   .skillup-home-static-banner .banner .heading {
@@ -2966,7 +2966,7 @@ header .search_icon_mobile {
   .skillup-home-static-banner .banner {
     display: inline-block;
     width: 100%;
-    background: url("ice9/assets/freemium/freemium-banner.jpg");
+    background: url("ice9/assets/freemium/banner-bg.jpg");
     background-position: top center;
     background-size: cover;
     padding-top: 72px;
@@ -3139,7 +3139,7 @@ img {
 @media (max-width: 767px) {
   .skillup-home-static-banner .banner {
     margin-top: 64px;
-    background: url("ice9/assets/freemium/freemium-banner.jpg");
+    background: url("ice9/assets/freemium/banner-bg.jpg");
   }
 
   .skillup-home-static-banner .banner .heading {
@@ -3172,7 +3172,7 @@ img {
   .skillup-home-static-banner .banner {
     display: inline-block;
     width: 100%;
-    background: url("ice9/assets/freemium/freemium-banner.jpg");
+    background: url("ice9/assets/freemium/banner-bg.jpg");
     background-position: top center;
     background-size: cover;
     padding-top: 72px;
