@@ -73,7 +73,7 @@
                 <p>Ensure accuracy and inclusivity with our advanced review platform, accessible
                     anytime, on any device.</p>
                 <div class="free-app-img"><img class="lazy" width="16" height="9" src="ice9/assets/form_opacity.png"
-                        data-src="ice9/assets/PNG 01.png" alt="Free Learning App" data-gumlet="false" /></div>
+                        data-src="ice9/assets/sec-cover.jpg" alt="Free Learning App" data-gumlet="false" /></div>
             </div>
             <div class="right-app">
                 <div class="qr-code">
