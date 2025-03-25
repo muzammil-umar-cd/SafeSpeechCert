@@ -14,12 +14,17 @@
   #certificate-container,
   #sample-certificate-container {
     border-image: url(/PP2020/images/status/border-m.png) 30 round !important;
+    width: 100%;
+  }
+  #trackingDiv{
+    padding: 1rem !important;
   }
 
   #asset-url,
   #permanent-url,
   #shorty-url {
     font-size: 14px !important;
+    left: 40px;
   }
 
   #compliance-status {
@@ -108,7 +113,27 @@
   .asset-info > div,
   .asset-title-container,
   #certificate-links .btn {
+    text-align: center !important;
+  }
+
+  .asset-status{
     text-align: center;
+    position: relative;
+    left: 100px;
+  }
+  .help-icon{
+    position: relative;
+    left: 105px;
+  }
+
+  .tooltip #account-status{
+    text-align: center !important;
+    position: relative;
+    left: 76px;
+  }
+
+  .help-ico-as{
+    left: 81px !important;
   }
 
   .asset-info > div > div:first-child,
@@ -279,7 +304,7 @@
 @media (max-width: 1400px) {
   div.section,
   .inner-nav-header {
-    margin: 0 20px;
+    margin: 0 6px;
   }
 }
 
