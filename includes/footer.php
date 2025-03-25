@@ -1,30 +1,23 @@
 <footer id="footer">
     <div>
-        <div class="mobile-footer">
-            <p class="lazy">© 2009 -
-                <!-- -->2025
-                <!-- -->-
-                <!-- -->SafeSpeechCert
-                <!-- -->.
-            </p>
-        </div>
-        <div class="hidden-mobile footer-links">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-3 pt-5">
+        <div class="footer-links">
+            <div class="container-fluid pt-5">
+                <div class="row p-3">
+                    <div class="col-md-1"></div>
+                    <div class="col-md-3">
                         <div class="row">
                             <div class="col-md-12">
                                 <img src="safespeechcert.png" alt="">
                             </div>
                             <div class="col-md-12 pt-3">
-                                <p style="font-size: 13px;">
+                                <p class="footer-desc" style="font-size: 13px;">
                                     At SafeSpeechCert, we promote respectful communication. Our services help ensure
                                     your content is free from hate speech and offensive language.
                                 </p>
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-3 pt-5 ql">
+                    <div class="col-md-2 ql">
                         <h4 class="pb-3">Quick Links</h4>
                         <ul>
                             <li><a href="/">Home</a></li>
@@ -32,14 +25,14 @@
                             <li><a href="javascript:;" title="Coming Soon">Contact Us</a></li>
                         </ul>
                     </div>
-                    <div class="col-md-3 pt-5 ql">
+                    <div class="col-md-2">
                         <h4 class="pb-3">Discover</h4>
                         <ul>
                             <li><a href="expert-content-review.php">Expert Content Review</a></li>
                             <li><a href="contact.php">Contact Support</a></li>
                         </ul>
                     </div>
-                    <div class="col-md-3 pt-5 ql">
+                    <div class="col-md-3">
                         <h4 class="pb-3">Contact</h4>
                         <ul>
                             <li><a href="tel:+14128398883"> +1(123) 123-1234</a></li>

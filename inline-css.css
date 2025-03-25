@@ -1157,6 +1157,15 @@ footer
   footer .foot-socials a.desktop {
     display: none;
   }
+  .ql {
+    padding: 25px 15px !important;
+  }
+  .footer-desc{
+    text-align: center;
+  }
+  .callback-forms{
+    width: 100% !important;
+  }
 }
 
 @media (max-width: 991px) {
@@ -1645,10 +1654,13 @@ header .sign-up-login {
   border-radius: 5px;
   padding: 0 20px;
   width: 116px;
+  text-decoration: none;
 }
 
 header .sign-up-login:hover {
   color: #fff;
+  background: #FF8500;
+  border: 1px solid #fff;
 }
 
 header .after-login {
@@ -2140,7 +2152,7 @@ header .search_icon_mobile {
 
   header .logo img {
     max-height: 42px;
-    width: 160px;
+    width: 152px;
     height: 26px;
     margin-top: 5px;
   }
@@ -2162,7 +2174,7 @@ header .search_icon_mobile {
     padding: 0 8px;
     margin-right: 12px;
     font-weight: 500;
-    width: 70px;
+    width: fit-content;
   }
 
   header .search_bar {
@@ -2320,7 +2332,11 @@ header .search_icon_mobile {
     margin-right: 18px !important;
   }
 }
-
+.skill-up .skill-content a.btn:hover{
+  background: #FF8500;
+  color: #fff;
+  border: 1px solid #fff;
+}
 @media (min-width: 768px) {
   header .after-login {
     font-size: 16px;
@@ -2328,6 +2344,7 @@ header .search_icon_mobile {
 
   .skill-up .skill-content a.btn {
     font-size: 18px;
+    background: #44aed7;
   }
 }
 
@@ -2338,13 +2355,13 @@ header .search_icon_mobile {
 
   header .logo img {
     max-height: 38px;
-    width: 130px;
-    height: 23px;
+    width: 160px;
+    height: 33px;
     margin-top: 6px;
   }
 
   header .sign-up-login {
-    width: 65px;
+    width: fit-content;
   }
 
   header .login {
@@ -2524,7 +2541,7 @@ header .search_icon_mobile {
   }
 
   header .sign-up-login {
-    width: 116px;
+    width: fit-content;
   }
 
   header .login {
@@ -2835,6 +2852,7 @@ header .search_icon_mobile {
 @media (min-width: 991px) {
   .skillup-home-static-banner .banner .cta-container .get-recom-btn {
     width: 230px;
+    margin-top: 3px;
   }
 
   .skillup-home-static-banner .new-cta {
@@ -4096,8 +4114,12 @@ div.reviews .review-card h3 + span {
 
 @media (max-width: 480px) {
   .banner p {
-    font-size: 24px;
+    font-size: 14px;
     padding: 12px 12px;
+    line-height: 21px;
+  }
+  #fileDetails div{
+    font-size: 12px;
   }
 }
 
@@ -4345,6 +4367,10 @@ div.reviews .review-card h3 + span {
   background-position: -132px -374px;
 }
 
+.faq-wrapper .container h2{
+  text-align: center;
+}
+
 @media (max-width: 767px) {
   .career-growth .left-video .gif-img {
     padding: 0;
@@ -4356,15 +4382,39 @@ div.reviews .review-card h3 + span {
 
   .career-growth .key-feature {
     margin-top: 36px;
+    max-width: 100% !important;
   }
 
   .career-growth .key-feature h2 {
-    font-size: 18px;
+    font-size: 20px;
     line-height: 28px;
+    text-align: center;
   }
 
   .career-growth .key-feature ul {
-    margin-top: 30px;
+    margin-left: 15px;
+  }
+
+  .career-growth li {
+    max-width: 100% !important;
+    font-size: 12px;
+  }
+
+  .career-growth .left-video .image-tag span{
+    font-size: 10px;
+  }
+  .free-app div.left-app h2, .free-app .left-app p{
+    text-align: center;
+    margin-left: 9px;
+  }
+  .faq-wrapper .container{
+    padding: 1rem !important;
+  }
+  .fs-title{
+    font-size: 15px !important;
+  }
+  #heading{
+    font-size: 20px;
   }
 }
 

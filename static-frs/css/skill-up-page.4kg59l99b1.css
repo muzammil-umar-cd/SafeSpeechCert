@@ -355,7 +355,7 @@
   height: 15px;
 }
 .skillup-referral-popup .skillup-referral-header {
-  background: url("https://www.simplilearn.com/ice9/refer/banner_desktop.svg")
+  background: url("../../ice9/refer/banner_desktop.svg")
     no-repeat #fff;
   background-position: top center;
   text-align: center !important;
@@ -471,7 +471,7 @@
   border-bottom: none;
 }
 .category-list .skillup-referral-popup .modal-content a.close:hover {
-  background: url(https://www.simplilearn.com/ice9/assets/frs-sprite_4.svg)
+  background: url(ice9/assets/frs-sprite_4.svg)
     no-repeat;
   background-position: -20px -54px;
   width: 15px;
@@ -726,7 +726,7 @@ li.active .exam-tab-button a::after {
   display: inline-block;
   vertical-align: middle;
   content: "";
-  background: url("https://www.simplilearn.com/ice9/assets/freemium-sprite_v7.svg")
+  background: url("../../ice9/assets/freemium-sprite_v7.svg")
     no-repeat;
   background-position: -226px -147px;
   margin-left: 10px;
@@ -982,6 +982,8 @@ li.active .exam-tab-button a::after {
     line-height: 1.5;
     max-width: 476px;
     margin-top: 16px;
+    text-align: center;
+    margin-left: 115px;
   }
   .free-app .right-app .google-play-app {
     margin-top: 64px;
@@ -1017,6 +1019,8 @@ li.active .exam-tab-button a::after {
   }
   .free-app .left-app p {
     line-height: 1.63;
+    margin-left: 0px;
+    text-align: left;
   }
   .free-app .right-app {
     margin-top: 72px;
@@ -1251,7 +1255,7 @@ h2 {
   display: inline-block;
   width: 14px;
   height: 14px;
-  background: url("https://www.simplilearn.com/ice9/assets/freemium-sprite_v7.svg")
+  background: url("../../ice9/assets/freemium-sprite_v7.svg")
     no-repeat;
   vertical-align: middle;
   background-position: -20px -203px;
@@ -1288,7 +1292,7 @@ h2 {
   position: absolute;
   top: 9px;
   left: 5px;
-  background: url("https://www.simplilearn.com/ice9/assets/Ticket_Gray.svg")
+  background: url("../../ice9/assets/Ticket_Gray.svg")
     no-repeat;
 }
 .explore-courses .info-exp .completion-certificate p:nth-child(2) {
@@ -1702,7 +1706,7 @@ h2 {
     position: absolute;
     top: 0;
     right: 25px;
-    background: url("https://www.simplilearn.com/ice9/assets/freemium-sprite_v7.svg")
+    background: url("../../ice9/assets/freemium-sprite_v7.svg")
       no-repeat;
     background-position: -105px -239px;
   }
@@ -1948,7 +1952,7 @@ html {
   position: absolute;
   top: 4px;
   left: 3px;
-  background: url("https://www.simplilearn.com/ice9/assets/trophy_icon_new.svg")
+  background: url("../../ice9/assets/trophy_icon_new.svg")
     no-repeat;
 }
 .recommendedCourses {
@@ -2122,7 +2126,7 @@ html {
   float: right;
   width: 14px;
   height: 14px;
-  background: url("https://www.simplilearn.com/ice9/assets/freemium-sprite_v7.svg")
+  background: url("../../ice9/assets/freemium-sprite_v7.svg")
     no-repeat;
   background-position: -20px -203px;
   margin-left: 5px;
@@ -2172,7 +2176,7 @@ html {
   position: absolute;
   top: 9px;
   left: 5px;
-  background: url("https://www.simplilearn.com/ice9/assets/Ticket_Gray.svg")
+  background: url("../../ice9/assets/Ticket_Gray.svg")
     no-repeat;
 }
 .recommendedCourses
@@ -2217,7 +2221,7 @@ html {
   position: absolute;
   top: 4px;
   left: 3px;
-  background: url("https://www.simplilearn.com/ice9/assets/trophy_icon_new.svg")
+  background: url("../../ice9/assets/trophy_icon_new.svg")
     no-repeat;
 }
 .recommendedCourses
@@ -2665,7 +2669,7 @@ html {
     .parent-block
     .right-block {
     width: calc(100% - 160px);
-    background-image: url("https://www.simplilearn.com/ice9/assets/recommendations.svg");
+    background-image: url("../../ice9/assets/recommendations.svg");
     background-repeat: no-repeat;
   }
 }
@@ -2710,6 +2714,16 @@ html {
     display: none;
     width: 0;
   }
+}
+.recommendation-container .get-recommendation-block .parent-block .left-block .get-recommendation-btn{
+  text-decoration: none;
+  /* padding: 5px; */
+}
+
+.recommendation-container .get-recommendation-block .parent-block .left-block .get-recommendation-btn:hover{
+  background: #FF8500;
+  color: #fff;
+  border: 1px solid #fff;
 }
 @media (min-width: 992px) {
   .recommendation-container .get-recommendation-block {
@@ -2758,7 +2772,7 @@ html {
     .right-block {
     width: 20%;
     text-align: left;
-    background-image: url("https://www.simplilearn.com/ice9/assets/recommedations_reverse.svg");
+    background-image: url("../../ice9/assets/recommedations_reverse.svg");
     background-repeat: no-repeat;
   }
 }
@@ -3836,7 +3850,7 @@ tr.introjs-showElement > th {
     font-weight: 400;
   }
   #b2b-ui-upgrade.b2b-ui-upgrade .eligible-candidates li::before {
-    background: url("https://www.simplilearn.com/ice9/assets/b2b_upgrade_close.svg")
+    background: url("../../ice9/assets/b2b_upgrade_close.svg")
       no-repeat;
     background-position: inherit;
     width: 20px;
@@ -5798,10 +5812,11 @@ button[type="submit"] {
     width: 100%;
   }
   .accordion .accordion-content p{
-    font-size: 9px;
+    font-size: 12px;
+    line-height: 21px;
   }
   .accordion button .icon{
-    top: 4px;
+    right: 10px;
   }
 }
 
@@ -5815,7 +5830,7 @@ button[type="submit"] {
     width: 100%;
   }
   .accordion button .accordion-title {
-    font-size: 11px;
+    font-size: 12px;
   }
 }
 
@@ -5944,8 +5959,5 @@ button[type="submit"] {
   /* padding: 5px; */
 }
 
-.ql {
-  position: relative;
-  left: 81px;
-}
+
 

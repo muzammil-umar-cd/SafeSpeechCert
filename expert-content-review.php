@@ -170,21 +170,21 @@ $merchants = $get_merchants->fetch_assoc();
                                 </div>
                             </div>
                             <div class="row" style="padding: 10px;">
-                                <div class="col-md-6">
+                                <div class="col-md-6 col-6">
                                     <label for="text"> First Name: </label>
                                     <input type="text" class="form-control" id="m_fname" required
                                         placeholder="First Name">
                                 </div>
-                                <div class="col-md-6">
+                                <div class="col-md-6 col-6">
                                     <label for="text"> Last Name: </label>
                                     <input type="text" class="form-control" id="m_lname" required
                                         placeholder="Last Name">
                                 </div>
-                                <div class="col-md-6">
+                                <div class="col-md-6 col-6">
                                     <label for="text"> Email: </label>
                                     <input type="text" class="form-control" id="m_email" required placeholder="Email">
                                 </div>
-                                <div class="col-md-6">
+                                <div class="col-md-6 col-6">
                                     <label for="text"> Phone: </label>
                                     <input type="text" class="form-control" id="m_phone" required placeholder="Phone">
                                 </div>
@@ -193,21 +193,21 @@ $merchants = $get_merchants->fetch_assoc();
                                     <input type="text" class="form-control" id="m_street" required
                                         placeholder="Street Address">
                                 </div>
-                                <div class="col-md-4">
+                                <div class="col-md-4 col-6">
                                     <label for="text"> ZipCode: </label>
                                     <input type="text" class="form-control" id="m_zipcode" required
                                         placeholder="ZipCode">
                                 </div>
-                                <div class="col-md-4">
+                                <div class="col-md-4 col-6">
                                     <label for="text"> City: </label>
                                     <input type="text" class="form-control" id="m_city" required placeholder="City">
                                 </div>
-                                <div class="col-md-4">
+                                <div class="col-md-4 col-6">
                                     <label for="text"> Country: </label>
                                     <input type="text" class="form-control" id="m_country" required
                                         placeholder="Country">
                                 </div>
-                                <div class="col-md-4">
+                                <div class="col-md-4 col-6">
                                     <label for="text"> State: </label>
                                     <input type="text" class="form-control" id="m_state" required placeholder="State">
                                 </div>

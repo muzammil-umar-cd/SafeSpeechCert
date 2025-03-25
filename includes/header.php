@@ -59,11 +59,9 @@
                                 </button>
                             </form>
                         </div>
-                        <a href="javascript:;" class="sign-up-login" title="Sign-up">
-                            <!-- -->Get a Quote
-                            <!-- -->
+                        <a href="expert-content-review" class="sign-up-login" title="Sign-up">
+                            Get Certified Now
                         </a>
-                        <a href="tel:(123) 123-1234" class="login" title="Call Now">(123) 123-1234</a>
                     </nav>
                 </div>
             </header>

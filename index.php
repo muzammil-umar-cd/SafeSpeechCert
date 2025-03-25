@@ -11,8 +11,7 @@
             <div class="container cta-container">
                 <div> <a href="expert-content-review.php" class="btn">Expert Content Review</a></div>
                 <div class="new-cta">
-                    <p>Not sure where to get started?</p><a href="contact.php" class="btn get-recom-btn rec-before-login">Contact
-                        Support</a>
+                    <p>Not sure where to get started?</p><a href="contact.php" class="btn get-recom-btn rec-before-login">Request a Demo</a>
                 </div>
             </div>
         </div>
@@ -71,7 +70,7 @@
         <div class="container">
             <div class="left-app">
                 <h2>Seamless Content Review Anytime, Anywhere</h2>
-                <p>Ensure accuracy and inclusivity with our advanced <br /> review platform, accessible
+                <p>Ensure accuracy and inclusivity with our advanced review platform, accessible
                     anytime, on any device.</p>
                 <div class="free-app-img"><img class="lazy" width="16" height="9" src="ice9/assets/form_opacity.png"
                         data-src="ice9/assets/content-review.jpg" alt="Free Learning App" data-gumlet="false" /></div>
