@@ -24,7 +24,7 @@ if (isset($_GET['token'])) {
                 <div class="left-container on-large red-bg">
                     <div id="canvas-container" style="position: relative; display: inline-block;">
                         <img src="Stamp.png" id="image" alt="Image" width="300px" />
-                        <div class="qr-code"
+                        <div id="qr-code"
                             style="position: absolute; top: 47%; left: 50%; transform: translate(-50%, -50%);">
                         </div>
                     </div>
@@ -63,7 +63,7 @@ if (isset($_GET['token'])) {
                 <div class="left-container on-small red-bg">
                     <div id="canvas-container" style="position: relative; display: inline-block;">
                         <img src="Stamp.png" id="image" alt="Image" class="badge" width="300px" style="display: inline-block;" />
-                        <div class="qr-code"
+                        <div id="qr-code"
                             style="position: absolute; top: 47%; left: 50%; transform: translate(-50%, -50%);">
                         </div>
                     </div>
@@ -246,7 +246,7 @@ if (isset($_GET['token'])) {
 $(document).ready(function() {
     $token_no = $('#token_no').val();
 
-    $(".qr-code").html("");
+    $("#qr-code").html("");
 
     var qrcode = new QRCode("qr-code", {
         text: "https://safespeechcert.demoprojectonline.com/certification?token=" +

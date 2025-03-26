@@ -11,7 +11,7 @@ $merchants = $get_merchants->fetch_assoc();
 <div id="skillupBanner" class="skillup-home-static-banner">
     <div class="banner" data-test="Banner" style="
       background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-        url('ice9/assets/freemium/freemium-banner.jpg');
+        url('ice9/assets/freemium/process-banner.jpg');
       background-position: top center;
       background-size: cover;
     ">
