@@ -3,8 +3,8 @@
 <div id="skillupBanner" class="skillup-home-static-banner">
     <div class="banner" data-test="Banner" style="
       background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-        url('ice9/assets/freemium/freemium-banner.jpg');
-      background-position: top center;
+        url('ice9/about/Cover About Us.jpg');
+      background-position: center;
       background-size: cover;
     ">
         <div class="container heading text-center">
@@ -16,8 +16,9 @@
 <div class="container-fluid">
     <div class="row p-4">
             <div class="col-md-12 pt-4">
+            <h3 class="mb-4">Welcome to SafeSpeechCert!</h3>
                 <p class="mb-4">
-                    Welcome to SafeSpeechCert! We are a team of content experts committed to promoting
+                    We are a team of content experts committed to promoting
                     responsible, ethical, and inclusive communication. Our mission is to ensure that content
                     across various platforms—whether books, blogs, articles, or social media posts—is free from
                     harmful language, bias, and hate speech.
