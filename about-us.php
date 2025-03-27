@@ -14,8 +14,7 @@
 </div>
 
 <div class="container-fluid">
-    <div class="row">
-        <div class="container-fluid p-5">
+    <div class="row p-4">
             <div class="col-md-12 pt-4">
                 <p class="mb-4">
                     Welcome to SafeSpeechCert! We are a team of content experts committed to promoting
@@ -264,7 +263,6 @@
                     feels safe, valued, and heard.
                 </p>
             </div>
-        </div>
     </div>
 </div>
 

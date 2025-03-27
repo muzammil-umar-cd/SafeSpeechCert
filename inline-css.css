@@ -5043,6 +5043,7 @@ div.reviews .review-card h3 + span {
 }
 
 .who-what .row .col-md-6 .card{
+  padding-top: 1rem;
   min-height: 370px;
   border-bottom-left-radius: 20%;
   border-top-right-radius: 20%;
@@ -5140,6 +5141,14 @@ svg {
   }
 }
 
+@media (max-width: 767px) {
+  .grey{
+    padding: 0;
+  }
+  .who-what .row .col-md-6 .card {
+    margin-top: 4rem !important;
+  }
+}
 
 /*  PROCESS  */
 .process {
@@ -5198,6 +5207,13 @@ svg {
   margin-right: auto;
   margin-left: auto;
 }
+
+
+@media (max-width: 767px) {
+  .process-details{
+    padding: 1rem;
+  }
+}
 .process-details .discover,
 .process-details .design,
 .process-details .implement,
@@ -5227,6 +5243,15 @@ svg {
   display: block;
   content: '';
 }
+
+.process-details .discover p,
+  .process-details .design p,
+  .process-details .implement p,
+  .process-details .develop p,
+  .process-details .deliver p{
+    font-size: 14px
+  }
+
 .process-details .discover .heading::after {
   background: #50b1aa;
 }
@@ -5241,6 +5266,36 @@ svg {
 }
 .process-details .deliver .heading::after {
   background: #60666a;
+}
+
+
+@media (max-width: 767px) {
+  .process-details .discover .heading{
+    text-align: center;
+  }
+
+  .process-details .discover p,
+  .process-details .design p,
+  .process-details .implement p,
+  .process-details .develop p,
+  .process-details .deliver p,
+  .process-details .discover .heading,
+  .process-details .design .heading,
+  .process-details .implement .heading,
+  .process-details .develop .heading,
+  .process-details .deliver .heading,
+  h1.numbered{
+    text-align: center;
+  }
+  .process-details .discover .heading::after,
+  .process-details .design .heading::after,
+  .process-details .implement .heading::after,
+  .process-details .develop .heading::after,
+  .process-details .deliver .heading::after {
+    position: relative;
+    left: 133px;
+  }
+
 }
 
 @media all and (min-width: 800px) {
