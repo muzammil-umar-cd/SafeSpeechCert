@@ -21,8 +21,8 @@
                         <h4 class="pb-3">Quick Links</h4>
                         <ul>
                             <li><a href="/">Home</a></li>
-                            <li><a href="javascript:;" title="Coming Soon">About Us</a></li>
-                            <li><a href="javascript:;" title="Coming Soon">Contact Us</a></li>
+                            <li><a href="about-us" title="Coming Soon">About Us</a></li>
+                            <li><a href="contact" title="Coming Soon">Contact Us</a></li>
                         </ul>
                     </div>
                     <div class="col-md-2">
