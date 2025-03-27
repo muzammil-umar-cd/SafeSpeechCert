@@ -156,7 +156,7 @@
             <div class="col-md-12 pt-5 wc">
                 <div class="row">
                     <div class="col-md-6">
-                        <img src="ice9/about/why chooza.jpg" class="img-fluid p-5" alt="">
+                        <img src="ice9/about/why chooza.jpg" class="img-fluid p-5" alt="" style="margin-top: 95px;">
                     </div>
                     <div class="col-md-6 p-4">
                         <h3 class="mb-4" style="text-transform: uppercase;">Why Choose SafeSpeechCert?</h3>

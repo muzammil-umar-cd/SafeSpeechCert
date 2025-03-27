@@ -5159,6 +5159,7 @@ svg {
   .ov .row .col-md-6 img,
   .wc .row .col-md-6 img{
     padding: 0px !important;
+    margin: 0px !important;
   }
 }
 
