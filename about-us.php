@@ -8,7 +8,7 @@
       background-size: cover;
     ">
         <div class="container heading text-center">
-            <h1 class="ban-header">About SafeSpeechCert</h1>
+            <h1 class="ban-header">About Us</h1>
         </div>
     </div>
 </div>
