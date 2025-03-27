@@ -5086,7 +5086,7 @@ svg {
 
 /*  SECTIONS  */
 .section {
-  min-height: 100vh;
+  /* min-height: 100vh; */
   color: #000;
   padding: 2em;
 }
