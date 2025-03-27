@@ -5042,20 +5042,27 @@ div.reviews .review-card h3 + span {
   font-size: 14px;
 }
 
-.who-what .row .col-md-6 .card{
+.who-what .row .col-md-6 .c1{
   padding-top: 1rem;
   min-height: 370px;
   border-bottom-left-radius: 20%;
   border-top-right-radius: 20%;
-  background: #44aed7;
-  color: #fff;
+  /* background: #44aed7;
+  color: #fff; */
 }
 
+.who-what .row .col-md-6 .c2{
+  padding-top: 1rem;
+  min-height: 370px;
+  border-bottom-right-radius: 20%;
+  border-top-left-radius: 20%;
+}
 
 /* OUR PROCESS */
 
 h1.numbered {
 	font-size: 2.4rem;
+  text-transform: uppercase;
 }
 
 @media (min-width: 960px) {

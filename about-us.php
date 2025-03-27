@@ -39,9 +39,9 @@
             <div class="col-md-12 pt-5 text-center who-what">
                 <div class="row">
                     <div class="col-md-6">
-                        <div class="card p-4"
-                            style="box-shadow: 3px 4px 18px 10px rgba(0, 0, 0, 0.08), 0px 10px 24px 10px rgba(0, 0, 0, 0.08);">
-                            <h3 class="mb-4">Who We Are</h3>
+                        <div class="card p-4 c1"
+                            style="box-shadow: 0px 3px 12px 5px rgba(0, 0, 0, 0.08), 0px 5px 15px 6px rgba(0, 0, 0, 0.08);">
+                            <h3 class="mb-4" style="text-transform: uppercase;">Who We Are</h3>
                             <p class="mb-3">
                                 We are a diverse team of content experts, linguists, AI specialists, and cultural
                                 analysts with one common goal: to make the digital space safer and more inclusive for
@@ -59,9 +59,9 @@
                     </div>
 
                     <div class="col-md-6">
-                        <div class="card p-4"
-                            style="box-shadow: 3px 4px 18px 10px rgba(0, 0, 0, 0.08), 0px 10px 24px 10px rgba(0, 0, 0, 0.08);">
-                            <h3 class="mb-4">What We Do</h3>
+                        <div class="card p-4 c2"
+                            style="box-shadow: 0px 3px 12px 5px rgba(0, 0, 0, 0.08), 0px 5px 15px 6px rgba(0, 0, 0, 0.08);">
+                            <h3 class="mb-4" style="text-transform: uppercase;">What We Do</h3>
                             <p class="mb-3">
                                 At SafeSpeechCert, we offer a comprehensive content review service that ensures your
                                 materials are free from harmful language, hate speech, and bias. Whether you’re an
@@ -88,10 +88,10 @@
             <div class="col-md-12 pt-5">
                 <div class="row">
                     <div class="col-md-6">
-                        <img src="ice9/certificates/Microsoft-Learning_Certification.jpg" class="img-fluid p-4" alt="">
+                        <img src="ice9/about/Our Mission.jpg" class="img-fluid p-5" alt="">
                     </div>
                     <div class="col-md-6 p-4">
-                        <h3 class="mb-4">Our Mission</h3>
+                        <h3 class="mb-4" style="text-transform: uppercase;">Our Mission</h3>
                         <p class="mt-3 mb-2">
                             At SafeSpeechCert, our mission is to promote responsibility, inclusivity, and ethical
                             communication
@@ -119,7 +119,7 @@
             <div class="col-md-12 pt-5">
                 <div class="row">
                     <div class="col-md-6 p-4">
-                        <h3 class="mb-4">Our Values</h3>
+                        <h3 class="mb-4" style="text-transform: uppercase;">Our Values</h3>
                         <ul>
                             <li class="mb-3">
                                 <b>Respect:</b>
@@ -148,7 +148,7 @@
                         </ul>
                     </div>
                     <div class="col-md-6">
-                        <img src="ice9/certificates/Microsoft-Learning_Certification.jpg" class="img-fluid p-4" alt="">
+                        <img src="ice9/about/Our Value.jpg" class="img-fluid p-5" alt="">
                     </div>
                 </div>
             </div>
@@ -156,10 +156,10 @@
             <div class="col-md-12 pt-5">
                 <div class="row">
                     <div class="col-md-6">
-                        <img src="ice9/certificates/Microsoft-Learning_Certification.jpg" class="img-fluid p-4" alt="">
+                        <img src="ice9/about/why chooza.jpg" class="img-fluid p-5" alt="">
                     </div>
                     <div class="col-md-6 p-4">
-                        <h3 class="mb-4">Why Choose SafeSpeechCert?</h3>
+                        <h3 class="mb-4" style="text-transform: uppercase;">Why Choose SafeSpeechCert?</h3>
                         <p class="mt-3 mb-2">
                             Choosing SafeSpeechCert means choosing a platform that combines advanced technology with
                             human expertise to provide you with a thorough, accurate content review. Here’s why you
@@ -250,7 +250,7 @@
                 </section>
             </div>
             <div class="col-md-12 pt-4">
-                <h3 class="mb-4">Our Commitment to a Better Future</h3>
+                <h3 class="mb-4" style="text-transform: uppercase;">Our Commitment to a Better Future</h3>
                 <p class="mb-4">
                     At SafeSpeechCert, we believe that ethical content creation is the cornerstone of a more just,
                     inclusive, and respectful society. Words are powerful tools for change, and we are here to help
