@@ -85,7 +85,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-md-12 pt-5">
+            <div class="col-md-12 pt-5 om">
                 <div class="row">
                     <div class="col-md-6">
                         <img src="ice9/about/Our Mission.jpg" class="img-fluid p-5" alt="">
@@ -116,7 +116,7 @@
                 </div>
             </div>
 
-            <div class="col-md-12 pt-5">
+            <div class="col-md-12 pt-5 ov">
                 <div class="row">
                     <div class="col-md-6 p-4">
                         <h3 class="mb-4" style="text-transform: uppercase;">Our Values</h3>
@@ -148,12 +148,12 @@
                         </ul>
                     </div>
                     <div class="col-md-6">
-                        <img src="ice9/about/Our Value.jpg" class="img-fluid p-5" alt="">
+                        <img src="ice9/about/Our Value.jpg" class="img-fluid p-5 img-val" alt="">
                     </div>
                 </div>
             </div>
 
-            <div class="col-md-12 pt-5">
+            <div class="col-md-12 pt-5 wc">
                 <div class="row">
                     <div class="col-md-6">
                         <img src="ice9/about/why chooza.jpg" class="img-fluid p-5" alt="">

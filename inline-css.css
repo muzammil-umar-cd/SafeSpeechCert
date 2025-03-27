@@ -5155,6 +5155,18 @@ svg {
   .who-what .row .col-md-6 .card {
     margin-top: 4rem !important;
   }
+  .om .row .col-md-6 img,
+  .ov .row .col-md-6 img,
+  .wc .row .col-md-6 img{
+    padding: 0px !important;
+  }
+}
+
+@media (max-width: 767px) {
+  .ov .row {
+      display: flex;
+      flex-direction: column-reverse; /* Switch the order of child elements */
+  }
 }
 
 /*  PROCESS  */
