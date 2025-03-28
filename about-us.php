@@ -16,30 +16,32 @@
 <div class="container-fluid">
     <div class="row p-4">
             <div class="col-md-12 pt-4">
-            <h3 class="mb-4">Welcome to SafeSpeechCert!</h3>
-                <p class="mb-4">
-                    We are a team of content experts committed to promoting
-                    responsible, ethical, and inclusive communication. Our mission is to ensure that content
-                    across various platforms—whether books, blogs, articles, or social media posts—is free from
-                    harmful language, bias, and hate speech.
-                </p>
-                <p class="mb-4">
-                    In today’s world, it’s essential to create content that fosters respect, inclusivity, and
-                    understanding. SafeSpeechCert is here to help content creators achieve that goal. By
-                    combining advanced AI technology with expert human review, we provide an innovative solution
-                    that ensures your content meets the highest standards of ethical responsibility.
-                </p>
-                <p>
-                    Whether you are an author, a website owner, or a content creator, SafeSpeechCert offers the
-                    tools to verify and enhance your work. Join us in making the digital space a safer, more
-                    respectful place for everyone.
-                </p>
-            </div>
+                <div class="container">
+                    <h3 class="mb-4">Welcome to SafeSpeechCert!</h3>
+                        <p class="mb-4">
+                            We are a team of content experts committed to promoting
+                            responsible, ethical, and inclusive communication. Our mission is to ensure that content
+                            across various platforms—whether books, blogs, articles, or social media posts—is free from
+                            harmful language, bias, and hate speech.
+                        </p>
+                        <p class="mb-4">
+                            In today’s world, it’s essential to create content that fosters respect, inclusivity, and
+                            understanding. SafeSpeechCert is here to help content creators achieve that goal. By
+                            combining advanced AI technology with expert human review, we provide an innovative solution
+                            that ensures your content meets the highest standards of ethical responsibility.
+                        </p>
+                        <p>
+                            Whether you are an author, a website owner, or a content creator, SafeSpeechCert offers the
+                            tools to verify and enhance your work. Join us in making the digital space a safer, more
+                            respectful place for everyone.
+                        </p>
+                    </div>
+                </div>
 
 
             <div class="col-md-12 pt-5 text-center who-what">
                 <div class="row">
-                    <div class="col-md-6">
+                    <div class="col-md-6 p-5">
                         <div class="card p-4 c1"
                             style="box-shadow: 0px 3px 12px 5px rgba(0, 0, 0, 0.08), 0px 5px 15px 6px rgba(0, 0, 0, 0.08);">
                             <h3 class="mb-4" style="text-transform: uppercase;">Who We Are</h3>
@@ -59,7 +61,7 @@
                         </div>
                     </div>
 
-                    <div class="col-md-6">
+                    <div class="col-md-6 p-5">
                         <div class="card p-4 c2"
                             style="box-shadow: 0px 3px 12px 5px rgba(0, 0, 0, 0.08), 0px 5px 15px 6px rgba(0, 0, 0, 0.08);">
                             <h3 class="mb-4" style="text-transform: uppercase;">What We Do</h3>
@@ -89,7 +91,7 @@
             <div class="col-md-12 pt-5 om">
                 <div class="row">
                     <div class="col-md-6">
-                        <img src="ice9/about/Our Mission.jpg" class="img-fluid p-5" alt="">
+                        <img src="ice9/about/Our Mission.jpg" class="img-fluid" alt="">
                     </div>
                     <div class="col-md-6 p-4">
                         <h3 class="mb-4" style="text-transform: uppercase;">Our Mission</h3>
@@ -149,7 +151,7 @@
                         </ul>
                     </div>
                     <div class="col-md-6">
-                        <img src="ice9/about/Our Value.jpg" class="img-fluid p-5 img-val" alt="">
+                        <img src="ice9/about/Our Value.jpg" class="img-fluid img-val" alt="">
                     </div>
                 </div>
             </div>
@@ -157,9 +159,9 @@
             <div class="col-md-12 pt-5 wc">
                 <div class="row">
                     <div class="col-md-6">
-                        <img src="ice9/about/why chooza.jpg" class="img-fluid p-5" alt="" style="margin-top: 30px;">
+                        <img src="ice9/about/1743181379232.jpg" class="img-fluid wcs-img p-5" alt="">
                     </div>
-                    <div class="col-md-6 p-4">
+                    <div class="col-md-6 p-4 mt-4">
                         <h3 class="mb-4" style="text-transform: uppercase;">Why Choose SafeSpeechCert?</h3>
                         <p class="mt-3 mb-2">
                             Choosing SafeSpeechCert means choosing a platform that combines advanced technology with
@@ -191,6 +193,22 @@
                             </li>
                         </ul>
                     </div>
+                </div>
+            </div>
+            <div class="col-md-12 pt-4">
+                <div class="container">
+                    <h3 class="mb-4" style="text-transform: uppercase;">Our Commitment to a Better Future</h3>
+                    <p class="mb-4">
+                        At SafeSpeechCert, we believe that ethical content creation is the cornerstone of a more just,
+                        inclusive, and respectful society. Words are powerful tools for change, and we are here to help
+                        ensure that the content we share with the world fosters understanding, compassion, and respect.
+                    </p>
+                    <p>
+                        As we look to the future, we are committed to continuously improving our services and expanding our
+                        reach, so that more content creators can benefit from the SafeSpeechCert certification. We want to
+                        build a digital ecosystem where ethical content is the norm, not the exception, and where everyone
+                        feels safe, valued, and heard.
+                    </p>
                 </div>
             </div>
             <div class="col-md-12 pt-5">
@@ -249,20 +267,6 @@
                         </div>
                     </div>
                 </section>
-            </div>
-            <div class="col-md-12 pt-4">
-                <h3 class="mb-4" style="text-transform: uppercase;">Our Commitment to a Better Future</h3>
-                <p class="mb-4">
-                    At SafeSpeechCert, we believe that ethical content creation is the cornerstone of a more just,
-                    inclusive, and respectful society. Words are powerful tools for change, and we are here to help
-                    ensure that the content we share with the world fosters understanding, compassion, and respect.
-                </p>
-                <p>
-                    As we look to the future, we are committed to continuously improving our services and expanding our
-                    reach, so that more content creators can benefit from the SafeSpeechCert certification. We want to
-                    build a digital ecosystem where ethical content is the norm, not the exception, and where everyone
-                    feels safe, valued, and heard.
-                </p>
             </div>
     </div>
 </div>

@@ -39,14 +39,32 @@
         <div class="skill-up">
             <header id="topHeader" from="SafeSpeechCertHome">
                 <div class="container">
-                    <div class="explore_bar displayFor_tablet  before-cg-wallet">
-                        <div id="explore-button"><span class="explore-category-menu" title="Explore"></span></div>
-                    </div><a href="/" class="logo" title="SafeSpeechCert"><img width="105" height="48" src="safespeechcert.png"
-                            alt="SafeSpeechCert" /></a>
+                    <div class="explore_bar displayFor_tablet before-cg-wallet">
+                        <div id="explore-button" class="dropdown">
+                            <span class="explore-category-menu" title="Explore"></span>
+                            <div class="dropdown-menu">
+                                <a href="about-us" class="dropdown-item">About Us</a>
+                                <a href="features" class="dropdown-item">Our Features</a>
+                                <a href="how-it-works" class="dropdown-item">How It Works</a>
+                                <a href="faq" class="dropdown-item">FAQ</a>
+                            </div>
+                        </div>
+                    </div>
+                    <a href="/" class="logo" title="SafeSpeechCert"><img width="105" height="48"
+                            src="safespeechcert.png" alt="SafeSpeechCert" /></a>
                     <nav class="links-right">
                         <div class="explore_bar displayFor_desktop before-login-explore before-cg-wallet">
-                            <div id="explore-button"><span class="explore-category-menu"
-                                    title="Explore"><span>Explore</span></span></div>
+                            <div id="explore-button" class="dropdown">
+                                <span class="explore-category-menu" title="Explore">
+                                    <span>Explore</span>
+                                </span>
+                                <div class="dropdown-menu">
+                                    <a href="about-us" class="dropdown-item">About Us</a>
+                                    <a href="features" class="dropdown-item">Our Features</a>
+                                    <a href="how-it-works" class="dropdown-item">How It Works</a>
+                                    <a href="faq" class="dropdown-item">FAQ</a>
+                                </div>
+                            </div>
                         </div>
                         <div class="search_bar">
                             <form name="SafeSpeechCert-search-tag" action="certificaiton-search.php" method="get">

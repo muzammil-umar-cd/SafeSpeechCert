@@ -1268,6 +1268,7 @@ a.blogger span {
   position: relative;
   display: inline-block;
   opacity: 1 !important;
+  z-index: 1 !important;
 }
 
 .tooltip .tooltiptext {
