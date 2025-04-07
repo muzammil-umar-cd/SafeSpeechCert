@@ -40,20 +40,20 @@
             <h2>Submit a Support Ticket</h2>
             <p>If you can't find an answer to your question or need assistance, fill out the form below and we will get back to you as soon as possible.</p>
 
-            <form action="#">
+            <form action="javascript:;" method="post" id="supportTicketForm" class="pt-4">
                 <label for="name">Name:</label>
-                <input type="text" id="name" name="name" required>
+                <input class="form-control" type="text" id="name" name="name" required>
 
                 <label for="email">Email Address:</label>
-                <input type="email" id="email" name="email" required>
+                <input class="form-control" type="email" id="email" name="email" required>
 
                 <label for="subject">Subject:</label>
-                <input type="text" id="subject" name="subject" required>
+                <input class="form-control" type="text" id="subject" name="subject" required>
 
                 <label for="description">Description of Issue:</label>
                 <textarea id="description" name="description" rows="4" required></textarea>
 
-                <button type="submit">Submit Ticket</button>
+                <button class="btn btn-primary mt-4" type="submit">Submit Ticket</button>
             </form>
         </section>
 
