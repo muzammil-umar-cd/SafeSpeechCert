@@ -5808,126 +5808,7 @@ svg {
   }
 }
 
-/* Container */
-.pricing-container {
-  max-width: 1200px;
-  margin: 0 auto;
-  background-color: #fff;
-  padding: 40px;
-  border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
 
-/* Header */
-.pricing-header {
-  text-align: center;
-  margin-bottom: 40px;
-}
-
-.pricing-header h1 {
-  font-size: 2.5em;
-  color: #333;
-}
-
-.pricing-header p {
-  font-size: 1.2em;
-  color: #777;
-  margin-top: 10px;
-}
-
-/* Plan Cards Container */
-.pricing-plans {
-  display: flex;
-  justify-content: space-between;
-  gap: 20px;
-  flex-wrap: wrap;
-}
-
-/* Individual Plan Cards */
-.plan-card {
-  background-color: #f9f9f9;
-  border: 1px solid #ddd;
-  padding: 30px;
-  border-radius: 8px;
-  width: 23%;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
-  text-align: center;
-  transition: transform 0.3s ease;
-}
-
-.plan-card h2 {
-  font-size: 1.5em;
-  color: #333;
-  margin-bottom: 10px;
-}
-
-.plan-card p.plan-description {
-  font-size: 0.9em;
-  color: #555;
-  margin-bottom: 20px;
-}
-
-.plan-card p.plan-price {
-  font-size: 1.5em;
-  font-weight: bold;
-  color: #007bff;
-  margin-bottom: 20px;
-}
-
-.plan-card ul {
-  list-style-type: none;
-  padding: 0;
-  margin-bottom: 20px;
-}
-
-.plan-card li {
-  font-size: 0.9em;
-  color: #555;
-  margin-bottom: 10px;
-}
-
-.plan-card .plan-button {
-  padding: 8px 19px;
-  background-color: #007bff;
-  color: #fff;
-  font-size: 1.1em;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-}
-
-.plan-card .plan-button:hover {
-  background-color: #0056b3;
-}
-
-/* Featured Plan Styling */
-.plan-card.featured {
-  background-color: #e7f3ff;
-  border: 1px solid #007bff;
-  transform: scale(1.05);
-}
-
-.plan-card.featured h2 {
-  color: #007bff;
-}
-
-.plan-card.featured .plan-price {
-  color: #007bff;
-}
-
-/* Responsive Design */
-@media (max-width: 768px) {
-  .pricing-plans {
-      flex-direction: column;
-      align-items: center;
-  }
-
-  .plan-card {
-      width: 80%;
-      margin-bottom: 30px;
-  }
-}
 
 .terms-header h1 {
   font-size: 2em;
@@ -5974,4 +5855,189 @@ svg {
 .privacy-content p {
   font-size: 1.1em;
   margin-bottom: 20px;
+}
+
+
+
+
+
+/* General body and container settings */
+.pricing-page {
+  font-family: Arial, sans-serif;
+  background-color: #f4f7fc;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* Header styling */
+.pricing-header {
+  background-color: #44AED7;
+  color: white;
+  padding: 40px 0;
+}
+
+.pricing-title {
+  font-size: 2.5em;
+  text-align: center;
+}
+
+.pricing-description {
+  font-size: 1.2em;
+  text-align: center;
+}
+
+/* Pricing section styling */
+.pricing-section {
+  background-color: #ffffff;
+  padding: 50px 0;
+}
+
+.pricing-plans {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.pricing-plan {
+  background-color: #f9f9f9;
+  border: 1px solid #e1e1e1;
+  padding: 30px;
+  text-align: center;
+  width: 22%;
+  border-radius: 8px;
+}
+
+.plan-title {
+  font-size: 2em;
+  color: #44AED7;
+}
+
+.price {
+  font-size: 1.5em;
+  font-weight: bold;
+  margin: 20px 0;
+  color: #44AED7;
+}
+
+.plan-features {
+  list-style: none;
+  margin-bottom: 30px;
+}
+
+.plan-features li {
+  margin: 10px 0;
+  text-decoration: underline;
+}
+
+.plan-btn {
+  display: inline-block;
+  background-color: #44AED7;
+  color: white;
+  padding: 12px 30px;
+  font-size: 1.1em;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+.enterprise-plan {
+  background-color: #f1f1f1;
+  border: 2px solid #44AED7;
+}
+
+.plan-btn:hover {
+  background-color: #309bc5;
+  color: #fff;
+}
+
+/* Comparison Table Section */
+.comparison-table {
+  background-color: #ffffff;
+  padding: 50px 0;
+}
+
+.pricing-comparison-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.pricing-comparison-table, th, td {
+  border: 1px solid #e1e1e1;
+  padding: 15px;
+  text-align: center;
+}
+
+.comparison-header {
+  background-color: #44AED7;
+  color: white;
+}
+
+.comparison-data {
+  font-size: 1.1em;
+}
+
+/* FAQ Section */
+.faq-section {
+  background-color: #f9f9f9;
+  padding: 50px 0;
+}
+
+.section-title {
+  font-size: 2em;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.faq-item {
+  margin-bottom: 20px;
+}
+
+.faq-question {
+  font-size: 1.3em;
+  font-weight: bold;
+}
+
+.faq-answer {
+  font-size: 1.1em;
+  color: #555;
+}
+
+/* Contact Section */
+.contact-section {
+  background-color: #ffffff;
+  padding: 50px 0;
+  text-align: center;
+}
+
+.contact-section p {
+  font-size: 1.2em;
+  margin-bottom: 20px;
+}
+
+/* Footer */
+.pricing-footer {
+  background-color: #f4f7fc;
+  padding: 20px 0;
+  text-align: center;
+  color: #333;
+}
+
+.pricing-footer p {
+  font-size: 1em;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+  .pricing-plans {
+      flex-direction: column;
+      align-items: center;
+  }
+
+  .pricing-plan {
+      width: 80%;
+      margin-bottom: 20px;
+  }
+
+  .pricing-comparison-table {
+      font-size: 0.9em;
+  }
 }
