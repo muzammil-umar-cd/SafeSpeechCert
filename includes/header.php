@@ -51,7 +51,6 @@ $key = 'secretkey123456';
                                 <a href="documentation" class="dropdown-item">API Documentation</a>
                                 <a href="features" class="dropdown-item">Our Features</a>
                                 <a href="pricing" class="dropdown-item">Pricing</a>
-                                <a href="how-it-works" class="dropdown-item">How It Works</a>
                                 <a href="faq" class="dropdown-item">FAQ</a>
                             </div>
                         </div>
@@ -69,7 +68,6 @@ $key = 'secretkey123456';
                                     <a href="documentation" class="dropdown-item">API Documentation</a>
                                     <a href="features" class="dropdown-item">Our Features</a>
                                     <a href="pricing" class="dropdown-item">Pricing</a>
-                                    <a href="how-it-works" class="dropdown-item">How It Works</a>
                                     <a href="faq" class="dropdown-item">FAQ</a>
                                 </div>
                             </div>
