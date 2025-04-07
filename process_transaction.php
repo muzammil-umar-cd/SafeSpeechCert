@@ -37,6 +37,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $m_exp = isset($_POST["m_exp"]) ? $conn->real_escape_string($_POST["m_exp"]) : "None";
     $m_cvc = isset($_POST["m_cvc"]) ? $conn->real_escape_string($_POST["m_cvc"]) : "None";
 
+    // Coupon Code
+    $coupon = isset($_POST["coupon"]) ? $conn->real_escape_string($_POST["coupon"]) : "None";
+
     // Handling File Upload
     if (isset($_POST["docFiles"])) {
         $fileDetails = json_decode($_POST["docFiles"], true);
@@ -89,8 +92,22 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     if ($paymentResponse['success']) {
         // Insert into Database using prepared statements
-        $stmt = $conn->prepare("INSERT INTO submissions (name, email, phone, brief, word_count, price, file_path, m_name, m_email, m_street, m_city, m_country, m_state, m_zipcode, payment_status, status, transaction_id, tracking_no) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)");
-        $stmt->bind_param("ssssssssssssssssss", $name, $email, $phone, $brief, $wordCountsJson, $pricesJson, $filePathsJson, $m_name, $m_email, $m_street, $m_city, $m_country, $m_state, $m_zipcode, $p_status, $status, $paymentResponse['transactionId'], $hexCode);
+        $stmt = $conn->prepare("INSERT INTO submissions (name, email, phone, brief, word_count, price, file_path, m_name, m_email, m_street, m_city, m_country, m_state, m_zipcode, payment_status, status, transaction_id, tracking_no, coupon) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)");
+        $stmt->bind_param("sssssssssssssssssss", $name, $email, $phone, $brief, $wordCountsJson, $pricesJson, $filePathsJson, $m_name, $m_email, $m_street, $m_city, $m_country, $m_state, $m_zipcode, $p_status, $status, $paymentResponse['transactionId'], $hexCode, $coupon);
+
+        $stmt2 = $conn->query("SELECT * FROM coupons WHERE code = '$coupon'");
+        $stmt_arr = $stmt2->fetch_assoc();
+
+        $discount = 0;
+        $coupon_title = '';
+
+        if(isset($stmt_arr)){
+            $discount = $stmt_arr['discount'];
+            $coupon_title = $stmt_arr['title'];
+        }else{
+            $discount = "None";
+            $coupon_title = "None";
+        }
 
         if ($stmt->execute()) {
             echo json_encode([
@@ -98,6 +115,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 'message' => 'Payment successful!',
                 'trackingNo' => $hexCode,
                 'totalWordCount' => $wordCountTotal,
+                'discount' => $discount,
+                'coupon_title' => $coupon_title,
                 'totalPrice' => $price,
                 'orderStatus' => $p_status,
                 'files' => $fileDetails

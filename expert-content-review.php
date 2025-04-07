@@ -159,6 +159,7 @@ $merchants = $get_merchants->fetch_assoc();
                             </div>
                             <input type="hidden" id="price" value="">
                             <input type="hidden" id="wordCountTotal" value="">
+                            <input type="hidden" id="coupon" value="">
                             <div class="row">
                                 <div class="col-md-12 d-flex justify-content-center" style="padding: 0 15px 15px;">
                                     <div class="form-check" style="background: rgb(68, 174, 215);">
@@ -212,6 +213,21 @@ $merchants = $get_merchants->fetch_assoc();
                                     <input type="text" class="form-control" id="m_state" required placeholder="State">
                                 </div>
                             </div>
+                            <div class="row">
+                                <div class="col-md-12 d-flex justify-content-center" style="padding: 0 15px 15px;">
+                                    <div class="form-check form-check-voucher">
+                                        <input style="display: none;height: auto;width: auto;" class="form-check-input" type="checkbox" id="useVoucher" style="margin-right: 10px;">
+                                        <label class="form-check-label" for="useVoucher" style="font-size: 14px;">
+                                            Have a voucher? Click Me!
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="col-md-12" id="voucherInputContainer" style="display: none; margin-top: 15px;">
+                                    <label for="voucherCode">Voucher Code: <span id="voucherMessage" style="color: red;display: none;"></span></label>
+                                    <input type="text" class="form-control" id="voucherCode" placeholder="Enter your voucher code">
+                                    <input type="button" class="btn btn-primary" id="voucherSubmit" value="Apply Voucher" style="width: 30%; padding: 0px; float: right;">
+                                </div>
+                            </div>
                             <h3 style="font-weight: bold;padding: 10px 10px;">Card Information</h3>
                             <?php if ($merchants["merchant_name"] == "Stripe") { ?>
                                 <input type="hidden" id="merchant_name" value="stripe">
@@ -246,7 +262,7 @@ $merchants = $get_merchants->fetch_assoc();
                             <?php } ?>
                         </div>
                         <button type="button" name="next" class="action-button paynow" style="width: 165px;">PayNow
-                            (<span class="price"></span>)</button>
+                            (<span class="price" id="totalPriceBtn"></span>)</button>
                         <input type="button" name="previous" class="previous action-button-previous" value="Previous" />
                     </fieldset>
                     <fieldset>
@@ -293,6 +309,11 @@ $merchants = $get_merchants->fetch_assoc();
                                         <td></td>
                                         <td class="text-right">Total Word Count:</td>
                                         <td><span class="text-center" id="totalWordCount">0</span></td>
+                                    </tr>
+                                    <tr class="total pt-3">
+                                        <td><b><span id="coupon_title"></span>%</b></td>
+                                        <td class="text-right">Discount:</td>
+                                        <td><span class="text-center" id="discountPercent">0</span></td>
                                     </tr>
                                     <tr class="total">
                                         <td></td>
@@ -359,3 +380,4 @@ $merchants = $get_merchants->fetch_assoc();
         });
     });
 </script>
+<script src="static-frs/js/voucher.js"></script>

@@ -1,3 +1,7 @@
+<?php 
+include("encoder.php");
+$key = 'secretkey123456';
+?>
 <!DOCTYPE html>
 <html lang="en-US">
 
@@ -44,7 +48,9 @@
                             <span class="explore-category-menu" title="Explore"></span>
                             <div class="dropdown-menu">
                                 <a href="about-us" class="dropdown-item">About Us</a>
+                                <a href="documentation" class="dropdown-item">API Documentation</a>
                                 <a href="features" class="dropdown-item">Our Features</a>
+                                <a href="pricing" class="dropdown-item">Pricing</a>
                                 <a href="how-it-works" class="dropdown-item">How It Works</a>
                                 <a href="faq" class="dropdown-item">FAQ</a>
                             </div>
@@ -60,7 +66,9 @@
                                 </span>
                                 <div class="dropdown-menu">
                                     <a href="about-us" class="dropdown-item">About Us</a>
+                                    <a href="documentation" class="dropdown-item">API Documentation</a>
                                     <a href="features" class="dropdown-item">Our Features</a>
+                                    <a href="pricing" class="dropdown-item">Pricing</a>
                                     <a href="how-it-works" class="dropdown-item">How It Works</a>
                                     <a href="faq" class="dropdown-item">FAQ</a>
                                 </div>

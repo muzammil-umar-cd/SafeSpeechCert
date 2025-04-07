@@ -271,7 +271,7 @@ $(document).ready(function () {
         { id: "#m_city", message: "Please enter City" },
         { id: "#m_country", message: "Please enter Country" },
         { id: "#m_state", message: "Please enter State" },
-        { id: "#m_zipcode", message: "Please enter Zip Code" },
+        { id: "#m_zipcode", message: "Please enter Zip Code" }
       ];
 
       for (let field of fields) {
@@ -356,6 +356,9 @@ $(document).ready(function () {
           // Stripe Token
           formData.append("stripeToken", token_id);
 
+          // Coupon Code
+          formData.append("coupon", $("#coupon").val());
+
           // Add docFiles key
           formData.append("docFiles", $("#docFiles").val());
 
@@ -406,6 +409,8 @@ $(document).ready(function () {
                 $("#totalPrice").text("$" + jsonResponse.totalPrice);
                 $("#orderStatus").text(jsonResponse.orderStatus);
                 $("#orderDate").text(new Date().toLocaleDateString());
+                $('#discountPercent').text(jsonResponse.discount);
+                $('#coupon_title').text(jsonResponse.coupon_title);
 
                 var orderDetailsContainer = $("#orderDetails");
                 orderDetailsContainer.empty();
@@ -588,6 +593,9 @@ $(document).ready(function () {
       formData.append("m_exp", $("#m_exp").val());
       formData.append("m_cvc", $("#m_cvc").val());
 
+      // Coupon Code
+      formData.append("coupon", $("#coupon").val());
+
       // Add docFiles key
       formData.append("docFiles", $("#docFiles").val());
 
@@ -638,6 +646,8 @@ $(document).ready(function () {
             $("#totalPrice").text("$" + jsonResponse.totalPrice);
             $("#orderStatus").text(jsonResponse.orderStatus);
             $("#orderDate").text(new Date().toLocaleDateString());
+            $('#discountPercent').text(jsonResponse.discount);
+            $('#coupon_title').text(jsonResponse.coupon_title);
 
             var orderDetailsContainer = $("#orderDetails");
             orderDetailsContainer.empty();
@@ -834,9 +844,6 @@ function copyToClipboard(elementId) {
   });
 }
 
-
-
-console.clear();
 
 var processGraphs = document.querySelectorAll('.process polygon');
 var processDetails = document.querySelectorAll('.process-details > div');

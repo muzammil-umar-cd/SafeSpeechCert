@@ -20,6 +20,10 @@
     height: auto;
     transition: border 0.1s, box-shadow 0.1s;
 }
+.card{
+    min-height: 365px;
+    display: block;
+}
 </style>
 
 <?php
@@ -59,7 +63,7 @@ if (isset($_GET['tag'])) {
                 <span class="text-warning"><?php echo $rs['name']; ?></span>
             </p>
             <p class="lead">
-                <strong>Tracking Number:</strong> <?php echo $order['tracking_no']; ?>
+                <strong>Tracking Number:</strong> <?php echo md5($order['tracking_no']); ?>
             </p>
         </div>
     </div>
@@ -98,12 +102,16 @@ if (isset($_GET['tag'])) {
                             </p>
                         </div>
                     </div>
-                    <div class="card-header text-white text-center mt-4" style="background-color: #44aed7;">
-                        <input type="hidden" id="token_no" value="<?php echo $order['tracking_no']; ?>">
-                        <h3>Files</h3>
-                    </div>
+                </div>
+            </div>
+            <div class="card shadow-sm">
+                <div class="card-header text-white text-center mt-4" style="background-color: #44aed7;">
+                    <input type="hidden" id="token_no" value="<?php echo $order['tracking_no']; ?>">
+                    <h3>Files</h3>
+                </div>
+                <div class="card-body">
                     <!-- <h4 class="mt-4"></h4> -->
-                    <table class="table table-bordered table-responsive">
+                    <table class="table table-bordered table-responsive" style="display: inline-table;">
                         <thead class="thead-light">
                             <tr>
                                 <th>File Name</th>
@@ -137,13 +145,13 @@ if (isset($_GET['tag'])) {
         <div class="col-md-6 col-lg-6 col-sm-12">
             <div class="card shadow-sm">
                 <div class="card-header text-white text-center" style="background-color: #44aed7;">
-                    <h3><strong>Get Your Protection Badge</h3>
+                    <h3><strong>Embed Your Protection Badge</h3>
                 </div>
                 <div class="card-body p-2">
                     <div class="row p-2">
                         <div class="col-md-6 pr-2">
                             <h4>1. Select a Badge</h4>
-                            <div class="row" style="height: 185px;overflow-y: scroll;">
+                            <div class="row" style="height: 223px;padding: 10px;overflow-y: scroll;">
                                 <div class="col-md-6 p-3 badge-container">
                                     <input type="radio" id="badge1" name="badge" value="ssc-badge-1.png"
                                         class="badge-radio">
@@ -216,23 +224,32 @@ if (isset($_GET['tag'])) {
                                 </div>
                             </div>
                         </div>
+                        <div class="col-md-6">
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <h4>2. Embed Your Badge</h4>
+                                    <textarea readonly name="" id="badgeEmbedCode" rows="5" class="form-control"
+                                        style="background: ghostwhite;height: auto;border: 1px solid #dbdbdb;"></textarea>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="card shadow-sm">
+                <div class="card-header text-white text-center" style="background-color: #44aed7;">
+                    <h3><strong>Download Your Badge</h3>
+                </div>
+                <div class="card-body p-2">
+                    <div class="row p-2">
                         <div class="col-md-6 d-flex justify-content-center">
                             <div id="canvas-container" style="position: relative; display: inline-block;">
-                                <img src="Stamp.png" id="image" alt="Image" width="400px" />
+                                <img src="Stamp.png" id="image" alt="Image" width="500px" />
                                 <div id="qr-code"
                                     style="position: absolute; top: 47%; left: 50%; transform: translate(-50%, -50%);">
                                 </div>
                             </div>
                         </div>
-                        <div class="col-md-6">
-                            <div class="row">
-                                <div class="col-md-12">
-                                    <h4>2. Embed Your Badge</h4>
-                                    <textarea readonly name="" id="badgeEmbedCode" rows="2"
-                                        style="background: ghostwhite;height: auto;border: 1px solid #dbdbdb;"></textarea>
-                                </div>
-                            </div>
-                        </div>                        
                         <div class="col-md-6 d-flex justify-content-center">
                             <div class="row">
                                 <div class="col-md-12">
@@ -335,7 +352,8 @@ $(document).ready(function() {
 
         html2canvas(document.getElementById("canvas-container"), {
             useCORS: true,
-            backgroundColor: null
+            backgroundColor: null,
+            scale: 3
         }).then(function(canvas) {
 
             var link = document.createElement('a');

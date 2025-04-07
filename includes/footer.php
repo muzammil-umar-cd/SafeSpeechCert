@@ -21,15 +21,18 @@
                         <h4 class="pb-3">Quick Links</h4>
                         <ul>
                             <li><a href="/">Home</a></li>
-                            <li><a href="about-us" title="Coming Soon">About Us</a></li>
-                            <li><a href="contact" title="Coming Soon">Contact Us</a></li>
+                            <li><a href="about-us" title="About Us">About Us</a></li>
+                            <li><a href="contact" title="Contact Us">Contact Us</a></li>
+                            <li><a href="features" title="Our Features">Our Features</a></li>
                         </ul>
                     </div>
                     <div class="col-md-2">
                         <h4 class="pb-3">Discover</h4>
                         <ul>
-                            <li><a href="expert-content-review.php">Expert Content Review</a></li>
-                            <li><a href="contact.php">Contact Support</a></li>
+                            <li><a href="expert-content-review" title="Expert Content Review">Expert Content Review</a></li>
+                            <li><a href="contact" title="Contact Us">Contact Support</a></li>
+                            <li><a href="documentation" title="API Documentation">API Documentation</a></li>
+                            <li><a href="pricing" title="Pricing">Pricing</a></li>
                         </ul>
                     </div>
                     <div class="col-md-3">

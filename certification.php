@@ -13,8 +13,6 @@ if (isset($_GET['token'])) {
 
     $cert = $result->fetch_assoc();
     $results = $results->fetch_assoc();
-    // var_dump($cert);
-    // var_dump($results);
 ?>
 <input type="hidden" id="token_no" value="<?php echo $results['tracking_no']; ?>">
 <div class="container-fluid mt-5 p-5" id="trackingDiv">
@@ -224,7 +222,6 @@ if (isset($_GET['token'])) {
 
 }else{
 ?>
-
 <div class="container-fluid mt-5 p-5" id="trackingDiv">
     <div class="section" id="certificate-container">
         <div class="middle-certificate-container">

@@ -5724,3 +5724,254 @@ svg {
     transform: translateX(0);
   }
 }
+
+
+/* Container for the entire page */
+.api-doc-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Header Section */
+.api-doc-header h1 {
+  font-size: 2em;
+  margin-bottom: 10px;
+}
+
+.api-doc-header p {
+  font-size: 1.2em;
+  color: #555;
+}
+
+/* Section Styles */
+.api-doc-section {
+  margin-bottom: 40px;
+}
+
+.api-doc-section h2 {
+  font-size: 1.5em;
+  margin-top: 20px;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.api-doc-section h3 {
+  font-size: 1.2em;
+  margin-top: 10px;
+  margin-bottom: 5px;
+}
+
+.api-doc-section ul {
+  list-style-type: disc;
+  margin-left: 20px;
+}
+
+.api-doc-section ol {
+  margin-left: 20px;
+  margin-bottom: 20px;
+}
+
+.api-doc-section pre {
+  background-color: #333;
+  color: #fff;
+  padding: 10px;
+  border-radius: 5px;
+  font-size: 0.9em;
+  overflow-x: auto;
+}
+
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .api-doc-container {
+      padding: 15px;
+  }
+
+  .api-doc-header h1 {
+      font-size: 1.8em;
+  }
+
+  .api-doc-section h2 {
+      font-size: 1.3em;
+  }
+
+  .api-doc-section h3 {
+      font-size: 1em;
+  }
+
+  .api-doc-section pre {
+      font-size: 0.85em;
+  }
+}
+
+/* Container */
+.pricing-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  background-color: #fff;
+  padding: 40px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Header */
+.pricing-header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.pricing-header h1 {
+  font-size: 2.5em;
+  color: #333;
+}
+
+.pricing-header p {
+  font-size: 1.2em;
+  color: #777;
+  margin-top: 10px;
+}
+
+/* Plan Cards Container */
+.pricing-plans {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+/* Individual Plan Cards */
+.plan-card {
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  padding: 30px;
+  border-radius: 8px;
+  width: 23%;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.plan-card h2 {
+  font-size: 1.5em;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.plan-card p.plan-description {
+  font-size: 0.9em;
+  color: #555;
+  margin-bottom: 20px;
+}
+
+.plan-card p.plan-price {
+  font-size: 1.5em;
+  font-weight: bold;
+  color: #007bff;
+  margin-bottom: 20px;
+}
+
+.plan-card ul {
+  list-style-type: none;
+  padding: 0;
+  margin-bottom: 20px;
+}
+
+.plan-card li {
+  font-size: 0.9em;
+  color: #555;
+  margin-bottom: 10px;
+}
+
+.plan-card .plan-button {
+  padding: 8px 19px;
+  background-color: #007bff;
+  color: #fff;
+  font-size: 1.1em;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.plan-card .plan-button:hover {
+  background-color: #0056b3;
+}
+
+/* Featured Plan Styling */
+.plan-card.featured {
+  background-color: #e7f3ff;
+  border: 1px solid #007bff;
+  transform: scale(1.05);
+}
+
+.plan-card.featured h2 {
+  color: #007bff;
+}
+
+.plan-card.featured .plan-price {
+  color: #007bff;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .pricing-plans {
+      flex-direction: column;
+      align-items: center;
+  }
+
+  .plan-card {
+      width: 80%;
+      margin-bottom: 30px;
+  }
+}
+
+.terms-header h1 {
+  font-size: 2em;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.terms-header p {
+  text-align: center;
+  font-size: 1.2em;
+  margin-bottom: 30px;
+}
+
+.terms-content h2 {
+  font-size: 1.5em;
+  margin-top: 20px;
+  color: #333;
+}
+
+.terms-content p {
+  font-size: 1.1em;
+  margin-bottom: 20px;
+}
+
+
+.privacy-header h1 {
+  font-size: 2em;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.privacy-header p {
+  text-align: center;
+  font-size: 1.2em;
+  margin-bottom: 30px;
+}
+
+.privacy-content h2 {
+  font-size: 1.5em;
+  margin-top: 20px;
+  color: #333;
+}
+
+.privacy-content p {
+  font-size: 1.1em;
+  margin-bottom: 20px;
+}
