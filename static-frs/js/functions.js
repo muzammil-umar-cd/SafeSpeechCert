@@ -203,23 +203,23 @@ $(".step-2").on("click", function () {
   setProgressBar(++current);
 });
 
-$(".step-2-btn").on("click", function (e) {
-  var button = $(this);
-  var form = button.closest("form")[0];
+// $(".step-2-btn").on("click", function (e) {
+//   var button = $(this);
+//   var form = button.closest("form")[0];
 
-  if (form.checkValidity()) {
-    e.preventDefault();
+//   if (form.checkValidity()) {
+//     e.preventDefault();
 
-    $("#step-3").show();
-    $("#step-2").hide();
-  } else {
-    form.classList.add("was-validated");
-  }
-});
-$(".back-step2").on("click", function () {
-  $("#step-3").hide();
-  $("#step-2").show();
-});
+//     $("#step-3").show();
+//     $("#step-2").hide();
+//   } else {
+//     form.classList.add("was-validated");
+//   }
+// });
+// $(".back-step2").on("click", function () {
+//   $("#step-3").hide();
+//   $("#step-2").show();
+// });
 
 $(".back-step3").on("click", function () {
   $("#step-3").show();
@@ -231,19 +231,6 @@ $(".checkout").on("click", function () {
   $("#step-4").show();
 });
 
-$("#name").on("input", function () {
-  $("#name_h1").val($("#name").val());
-});
-$("#email").on("input", function () {
-  $("#email_h1").val($("#email").val());
-});
-$("#phone").on("input", function () {
-  $("#phone_h1").val($("#phone").val());
-});
-$("#brief").on("input", function () {
-  $("#brief_h1").text($("#brief").val());
-});
-
 // PROCESS TRANSACTION
 
 $(document).ready(function () {
@@ -251,6 +238,33 @@ $(document).ready(function () {
     var stripe_key = $("#stripe_key").val();
     var stripe = Stripe(stripe_key);
     var elements = stripe.elements();
+    // var cardElement = elements.create('card', {
+    //   style: {
+    //     base: {
+    //       iconColor: '#44aed7', // Custom icon color
+    //       color: '#272c37', // Text color
+    //       fontWeight: '500',
+    //       fontFamily: 'Roboto, Open Sans, Segoe UI, sans-serif',
+    //       fontSize: '16px',
+    //       fontSmoothing: 'antialiased',
+    //       backgroundColor: '#f9f9f9', // Background color for the input
+    //       border: '1px solid #ddd', // Border for the input
+    //       borderRadius: '5px', // Rounded corners
+    //       padding: '10px', // Padding inside the input
+    //       ':-webkit-autofill': {
+    //         color: '#fce883',
+    //       },
+    //       '::placeholder': {
+    //         color: '#aab7c4', // Placeholder text color
+    //       },
+    //     },
+    //     invalid: {
+    //       iconColor: '#FFC7EE', // Icon color for invalid input
+    //       color: '#FFC7EE', // Text color for invalid input
+    //       borderColor: '#ff4d4f', // Border color for invalid input
+    //     },
+    //   },
+    // });
     var cardElement = elements.create("card");
 
     cardElement.mount("#card-element");
@@ -336,9 +350,6 @@ $(document).ready(function () {
           var token_id = result.token.id;
 
           // Step 2 - Personal Info
-          formData.append("name", $("#name").val());
-          formData.append("email", $("#email").val());
-          formData.append("phone", $("#phone").val());
           formData.append("brief", $("#brief").val());
           formData.append("price", $("#price").val().replace(/,/g, ""));
           formData.append("word_count", $("#wordCountTotal").val());
@@ -347,6 +358,8 @@ $(document).ready(function () {
           formData.append("m_fname", $("#m_fname").val());
           formData.append("m_lname", $("#m_lname").val());
           formData.append("m_email", $("#m_email").val());
+          formData.append("m_phone", $("#m_phone").val());
+          
           formData.append("m_street", $("#m_street").val());
           formData.append("m_city", $("#m_city").val());
           formData.append("m_country", $("#m_country").val());
@@ -362,6 +375,8 @@ $(document).ready(function () {
           // Add docFiles key
           formData.append("docFiles", $("#docFiles").val());
 
+          console.log(formData);
+          
           $.ajax({
             url: "process_transaction",
             type: "POST",
@@ -381,15 +396,13 @@ $(document).ready(function () {
                 });
                 // Clear all specified input fields
                 $("#docFile").val("");
-                $("#name").val("");
-                $("#email").val("");
-                $("#phone").val("");
                 $("#brief").val("");
                 $("#price").val("");
                 $("#wordCountTotal").val("");
                 $("#m_fname").val("");
                 $("#m_lname").val("");
                 $("#m_email").val("");
+                $("#m_phone").val("");
                 $("#m_street").val("");
                 $("#m_city").val("");
                 $("#m_country").val("");
@@ -405,6 +418,7 @@ $(document).ready(function () {
                 `;
                 // Display order details
                 $("#trackingNo").html(jsonResponse.trackingNo + " " + copy_SVG);
+                $('#details-tag').attr('href', 'certificaiton-search?tag=' + jsonResponse.trackingNo);
                 $("#totalWordCount").text(jsonResponse.totalWordCount);
                 $("#totalPrice").text("$" + jsonResponse.totalPrice);
                 $("#orderStatus").text(jsonResponse.orderStatus);
@@ -571,9 +585,6 @@ $(document).ready(function () {
       }
 
       // Step 2 - Personal Info
-      formData.append("name", $("#name").val());
-      formData.append("email", $("#email").val());
-      formData.append("phone", $("#phone").val());
       formData.append("brief", $("#brief").val());
       formData.append("price", $("#price").val().replace(/,/g, ""));
       formData.append("word_count", $("#wordCountTotal").val());
@@ -582,6 +593,7 @@ $(document).ready(function () {
       formData.append("m_fname", $("#m_fname").val());
       formData.append("m_lname", $("#m_lname").val());
       formData.append("m_email", $("#m_email").val());
+      formData.append("m_phone", $("#m_phone").val());
       formData.append("m_street", $("#m_street").val());
       formData.append("m_city", $("#m_city").val());
       formData.append("m_country", $("#m_country").val());
@@ -618,15 +630,13 @@ $(document).ready(function () {
             });
             // Clear all specified input fields
             $("#docFile").val("");
-            $("#name").val("");
-            $("#email").val("");
-            $("#phone").val("");
             $("#brief").val("");
             $("#price").val("");
             $("#wordCountTotal").val("");
             $("#m_fname").val("");
             $("#m_lname").val("");
             $("#m_email").val("");
+            $("#m_phone").val("");
             $("#m_street").val("");
             $("#m_city").val("");
             $("#m_country").val("");
@@ -642,6 +652,7 @@ $(document).ready(function () {
             `;
             // Display order details
             $("#trackingNo").html(jsonResponse.trackingNo + " " + copy_SVG);
+            $('#details-tag').attr('href', 'certificaiton-search?tag=' + jsonResponse.trackingNo);
             $("#totalWordCount").text(jsonResponse.totalWordCount);
             $("#totalPrice").text("$" + jsonResponse.totalPrice);
             $("#orderStatus").text(jsonResponse.orderStatus);
@@ -723,29 +734,6 @@ $(document).ready(function () {
         },
       });
     });
-  }
-});
-
-$("#usePersonalInfo").on("change", function () {
-  if (this.checked) {
-    $(".form-check").css("background", "#01950194");
-    var fullName = $("#name").val();
-    var nameParts = fullName.split(" ");
-    var firstName = nameParts[0];
-    var lastName = nameParts.length > 1 ? nameParts.slice(1).join(" ") : "";
-    var email = $("#email").val();
-    var phone = $("#phone").val();
-
-    $("#m_fname").val(firstName);
-    $("#m_lname").val(lastName);
-    $("#m_email").val(email);
-    $("#m_phone").val(phone);
-  } else {
-    $(".form-check").css("background", "#44aed7");
-    $("#m_fname").val("");
-    $("#m_lname").val("");
-    $("#m_email").val("");
-    $("#m_phone").val("");
   }
 });
 

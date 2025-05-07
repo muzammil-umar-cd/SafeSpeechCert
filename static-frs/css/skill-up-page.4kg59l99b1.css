@@ -5870,7 +5870,7 @@ button[type="submit"] {
 }
 
 .invoice-box {
-  max-width: 800px;
+  max-width: 100%;
   margin: auto;
   padding: 30px;
   border: 1px solid #eee;
@@ -5953,6 +5953,7 @@ button[type="submit"] {
   color: #fff;
   padding: 5px;
   border-radius: 6px;
+  font-size: medium;
 }
 
 .ql ul li {

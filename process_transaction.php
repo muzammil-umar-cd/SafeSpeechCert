@@ -4,7 +4,7 @@ require 'db.php';
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     // Remove var_dump and exit
-    // var_dump($_POST["docFiles"]);
+    // var_dump($_POST);
     // exit;
 
     $hexCode = bin2hex(random_bytes(16));
@@ -14,16 +14,18 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $merchants = $get_merchants->fetch_assoc();
 
     // Personal Information
-    $name = isset($_POST["name"]) ? $conn->real_escape_string($_POST["name"]) : "None";
-    $email = isset($_POST["email"]) ? $conn->real_escape_string($_POST["email"]) : "None";
-    $phone = isset($_POST["phone"]) ? $conn->real_escape_string($_POST["phone"]) : "None";
+    $fname = isset($_POST["m_fname"]) ? $conn->real_escape_string($_POST["m_fname"]) : "";
+    $lname = isset($_POST["m_lname"]) ? $conn->real_escape_string($_POST["m_lname"]) : "";
+    $name = $fname . ' ' . $lname;
+    $email = isset($_POST["m_email"]) ? $conn->real_escape_string($_POST["m_email"]) : "None";
+    $phone = isset($_POST["m_phone"]) ? $conn->real_escape_string($_POST["m_phone"]) : "None";
     $brief = isset($_POST["brief"]) ? $conn->real_escape_string($_POST["brief"]) : "None";
     $price = isset($_POST["price"]) ? $conn->real_escape_string($_POST["price"]) : "None";
     $wordCountTotal = isset($_POST["word_count"]) ? $conn->real_escape_string($_POST["word_count"]) : "None";
 
     // Payment Information
-    $m_fname = isset($_POST["m_fname"]) ? $conn->real_escape_string($_POST["m_fname"]) : "None";
-    $m_lname = isset($_POST["m_lname"]) ? $conn->real_escape_string($_POST["m_lname"]) : "None";
+    $m_fname = isset($_POST["m_fname"]) ? $conn->real_escape_string($_POST["m_fname"]) : "";
+    $m_lname = isset($_POST["m_lname"]) ? $conn->real_escape_string($_POST["m_lname"]) : "";
     $m_name = $m_fname . " " . $m_lname;
     $m_email = isset($_POST["m_email"]) ? $conn->real_escape_string($_POST["m_email"]) : "None";
     $m_phone = isset($_POST["m_phone"]) ? $conn->real_escape_string($_POST["m_phone"]) : "None";
@@ -105,8 +107,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             $discount = $stmt_arr['discount'];
             $coupon_title = $stmt_arr['title'];
         }else{
-            $discount = "None";
-            $coupon_title = "None";
+            $discount = "0";
+            $coupon_title = "";
         }
 
         if ($stmt->execute()) {

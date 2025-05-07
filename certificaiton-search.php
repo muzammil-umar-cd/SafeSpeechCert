@@ -20,7 +20,8 @@
     height: auto;
     transition: border 0.1s, box-shadow 0.1s;
 }
-.card{
+
+.card {
     min-height: 365px;
     display: block;
 }
@@ -52,11 +53,11 @@ if (isset($_GET['tag'])) {
         <div class="container heading text-center">
             <h1 class="ban-header">Order Details (<?php echo $order['name']; ?>)</h1>
             <?php
-                $or_status = $order['status'];
-                $get_status = "Select * from order_statuses WHERE id= $or_status";
-                $qr = mysqli_query($conn, $get_status);
-                $rs = mysqli_fetch_assoc($qr);
-            ?>
+                    $or_status = $order['status'];
+                    $get_status = "Select * from order_statuses WHERE id= $or_status";
+                    $qr = mysqli_query($conn, $get_status);
+                    $rs = mysqli_fetch_assoc($qr);
+                    ?>
             </p>
             <p class="lead p-4" style="text-transform: uppercase;">
                 Order Status: &nbsp;
@@ -78,66 +79,88 @@ if (isset($_GET['tag'])) {
                     <h3>Order Details</h3>
                 </div>
                 <div class="card-body">
-                    <div class="row">
-                        <div class="col-md-6">
-                            <p class="p-2" style="border-bottom: 1px solid #44aed7;"><strong>Name:</strong>
-                                <?php echo $order['name']; ?></p>
-                            <p class="p-2" style="border-bottom: 1px solid #44aed7;"><strong>Email:</strong>
-                                <?php echo $order['email']; ?></p>
-                            <p class="p-2" style="border-bottom: 1px solid #44aed7;"><strong>Phone:</strong>
-                                <?php echo $order['phone']; ?></p>
-                        </div>
-                        <div class="col-md-6">
-                            <p class="p-2" style="border-bottom: 1px solid #44aed7;"><strong>Brief:</strong>
-                                <?php echo $order['brief']; ?></p>
-                            <p class="p-2" style="border-bottom: 1px solid #44aed7;"><strong>Payment: </strong> <span
-                                    style="text-transform: uppercase;font-weight: bold;"><?php echo $order['payment_status']; ?></span>
-                            </p>
-                            <p class="p-2" style="border-bottom: 1px solid #44aed7;"><strong>Date:</strong>
-                                <?php echo $order['created_at']; ?></p>
-                            <p class="p-2" style="border-bottom: 1px solid #44aed7;">
-                                <strong>Certification:</strong>&nbsp;<a
-                                    href="certification?token=<?php echo $order['tracking_no']; ?>" target="_blank"
-                                    class="btn btn-primary btn-sm">View Certificate</a>
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="card shadow-sm">
-                <div class="card-header text-white text-center mt-4" style="background-color: #44aed7;">
-                    <input type="hidden" id="token_no" value="<?php echo $order['tracking_no']; ?>">
-                    <h3>Files</h3>
-                </div>
-                <div class="card-body">
-                    <!-- <h4 class="mt-4"></h4> -->
+                    <dl class="row">
+                        <dd class="col-sm-4">Name:</dd>
+                        <dt class="col-sm-8"><?php echo $order['name']; ?></dt>
+                        <dd class="col-sm-4">Email:</dd>
+                        <dt class="col-sm-8"><?php echo $order['email']; ?></dt>
+                        <dd class="col-sm-4">Phone:</dd>
+                        <dt class="col-sm-8"><?php echo $order['phone']; ?></dt>
+                        <dd class="col-sm-4">Brief:</dd>
+                        <dt class="col-sm-8"><?php echo $order['brief']; ?></dt>
+                        <dd class="col-sm-4">Payment Status:</dd>
+                        <dt class="col-sm-8"><?php echo $order['payment_status']; ?></dt>
+                        <dd class="col-sm-4">Date:</dd>
+                        <dt class="col-sm-8"><?php echo $order['created_at']; ?></dt>
+                        <dd class="col-sm-4">Certification:</dd>
+                        <dt class="col-sm-8"><a href="certification?token=<?php echo $order['tracking_no']; ?>"
+                                target="_blank" class="btn btn-primary btn-sm">View Certificate</a></dt>
+                    </dl>
+                    <hr>
                     <table class="table table-bordered table-responsive" style="display: inline-table;">
                         <thead class="thead-light">
                             <tr>
-                                <th>File Name</th>
+                                <th>Files</th>
                                 <th>Word Count</th>
                                 <th>Status</th>
                             </tr>
                         </thead>
                         <tbody>
                             <?php
-                                    for ($i = 0; $i < count($filePaths); $i++) {
-                                        echo "<tr>";
-                                        echo "<td>" . basename($filePaths[$i]) . "</td>";
-                                        echo "<td>" . $wordCounts[$i] . "</td>";
-                                        echo "<td>" . $rs['name'] . "</td>";
-                                        echo "</tr>";
-                                    }
-                                    ?>
+                                for ($i = 0; $i < count($filePaths); $i++) {
+                                    echo "<tr>";
+                                    echo "<td>" . basename($filePaths[$i]) . "</td>";
+                                    echo "<td>" . $wordCounts[$i] . "</td>";
+                                    echo "<td>" . $rs['name'] . "</td>";
+                                    echo "</tr>";
+                                }
+                            ?>
                         </tbody>
                     </table>
+                    <hr>
                     <div class="row mt-4 text-center">
                         <div class="col-md-6">
-                            <p><strong>Total Word Count:</strong> <?php echo array_sum($wordCounts); ?></p>
+                            <p style="display: flex;justify-content: space-between;"><strong
+                                    style="text-align: start;">Total Word Count:</strong>
+                                <?php echo array_sum($wordCounts); ?></p>
                         </div>
                         <div class="col-md-6">
-                            <p><strong>Total Price:</strong> $<?php echo array_sum($prices); ?></p>
+                            <p style="display: flex;justify-content: space-between;"><strong
+                                    style="text-align: start;">Subtotal:</strong>
+                                $<?php echo array_sum($prices); ?></p>
                         </div>
+                        <?php if ($order['coupon'] != '' || isset($order['coupon'])) { ?>
+                        <?php
+                            $code = $order['coupon'];
+                            $getCoupon = "SELECT * FROM coupons WHERE code='$code'";
+                            $coupon = mysqli_query($conn, $getCoupon);
+                            if ($coupon->num_rows > 0) {
+                                $cop = $coupon->fetch_assoc();
+                                $originalPrice = array_sum($prices);
+                                $discount = $cop['discount'];
+                                $discountPrice = ($originalPrice * $discount) / 100;
+                        ?>
+                        <div class="col-md-6">
+                            <p style="display: flex;justify-content: space-between;"><strong
+                                    style="text-align: start;">Discount:</strong><?php echo $cop['discount']; ?>%</p>
+                        </div>
+                        <div class="col-md-6">
+                            <p style="display: flex;justify-content: space-between;"><strong
+                                    style="text-align: start;">Total:</strong>
+                                $<?php echo $discountPrice; ?></p>
+                        </div>
+                        <?php } else { ?>
+                        <div class="col-md-6">
+                            <p style="display: flex;justify-content: space-between;"><strong
+                                    style="text-align: start;">Discount:</strong> 0%</p>
+                        </div>
+                        <div class="col-md-6">
+                            <p style="display: flex;justify-content: space-between;"><strong
+                                    style="text-align: start;">Total:</strong>
+                                $<?php echo array_sum($prices); ?></p>
+                        </div>
+                        <?php }
+                                } ?>
                     </div>
                 </div>
             </div>
@@ -145,12 +168,12 @@ if (isset($_GET['tag'])) {
         <div class="col-md-6 col-lg-6 col-sm-12">
             <div class="card shadow-sm">
                 <div class="card-header text-white text-center" style="background-color: #44aed7;">
-                    <h3><strong>Embed Your Protection Badge</h3>
+                    <h3><strong>Protection Badge</h3>
                 </div>
                 <div class="card-body p-2">
                     <div class="row p-2">
-                        <div class="col-md-6 pr-2">
-                            <h4>1. Select a Badge</h4>
+                        <div class="col-md-5 pr-2">
+                            <h6 class="pb-3">1. Select a Badge</h6>
                             <div class="row" style="height: 223px;padding: 10px;overflow-y: scroll;">
                                 <div class="col-md-6 p-3 badge-container">
                                     <input type="radio" id="badge1" name="badge" value="ssc-badge-1.png"
@@ -224,36 +247,33 @@ if (isset($_GET['tag'])) {
                                 </div>
                             </div>
                         </div>
-                        <div class="col-md-6">
+                        <div class="col-md-7">
                             <div class="row">
                                 <div class="col-md-12">
-                                    <h4>2. Embed Your Badge</h4>
-                                    <textarea readonly name="" id="badgeEmbedCode" rows="5" class="form-control"
+                                    <h6 class="pb-3">2. Embed Your Badge</h6>
+                                    <textarea readonly name="" id="badgeEmbedCode" rows="8" class="form-control"
                                         style="background: ghostwhite;height: auto;border: 1px solid #dbdbdb;"></textarea>
                                 </div>
                             </div>
                         </div>
                     </div>
-                </div>
-            </div>
-            <div class="card shadow-sm">
-                <div class="card-header text-white text-center" style="background-color: #44aed7;">
-                    <h3><strong>Download Your Badge</h3>
-                </div>
-                <div class="card-body p-2">
+                    <hr>
                     <div class="row p-2">
-                        <div class="col-md-6 d-flex justify-content-center">
+                        <div class="col-md-12 d-flex justify-content-center">
+                            <h6>Download Your Badge</h6>
+                        </div>
+                        <div class="col-md-12 d-flex justify-content-center">
                             <div id="canvas-container" style="position: relative; display: inline-block;">
-                                <img src="Stamp.png" id="image" alt="Image" width="500px" />
+                                <img src="Stamp.png" id="image" alt="Image" width="320px" />
                                 <div id="qr-code"
                                     style="position: absolute; top: 47%; left: 50%; transform: translate(-50%, -50%);">
                                 </div>
                             </div>
                         </div>
-                        <div class="col-md-6 d-flex justify-content-center">
+                        <div class="col-md-12 d-flex justify-content-center">
                             <div class="row">
                                 <div class="col-md-12">
-                                    <button id="download-btn" class="btn btn-primary">Download Badge</button>
+                                    <button id="download-btn" class="btn btn-primary">Download</button>
                                 </div>
                             </div>
                         </div>
