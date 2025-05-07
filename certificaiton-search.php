@@ -25,6 +25,10 @@
     min-height: 365px;
     display: block;
 }
+
+.shadow-sm{
+    box-shadow: 3px 4px 18px 10px rgba(0, 0, 0, 0.08), 0px 10px 24px 10px rgba(0, 0, 0, 0.08) !important;
+}
 </style>
 
 <?php

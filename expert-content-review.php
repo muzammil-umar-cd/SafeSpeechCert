@@ -152,17 +152,24 @@ $merchants = $get_merchants->fetch_assoc();
                                                 placeholder="ZipCode">
                                         </div>
                                         <div class="col-md-4 col-6">
-                                            <label for="text"> City: </label>
-                                            <input type="text" class="form-control" id="m_city" required placeholder="City">
+                                            <label for="text">Country: </label>
+                                            <select class="form-control" id="m_country" required>
+                                                <option value="">Select Country</option>
+                                            </select>
                                         </div>
+
                                         <div class="col-md-4 col-6">
-                                            <label for="text"> Country: </label>
-                                            <input type="text" class="form-control" id="m_country" required
-                                                placeholder="Country">
+                                            <label for="text">State: </label>
+                                            <select class="form-control" id="m_state" required>
+                                                <option value="">Select State</option>
+                                            </select>
                                         </div>
+                                        
                                         <div class="col-md-4 col-6">
-                                            <label for="text"> State: </label>
-                                            <input type="text" class="form-control" id="m_state" required placeholder="State">
+                                            <label for="text">City: </label>
+                                            <select class="form-control" id="m_city" required>
+                                                <option value="">Select City</option>
+                                            </select>
                                         </div>
                                     </div>
                                     <div class="row">
@@ -338,6 +345,65 @@ $merchants = $get_merchants->fetch_assoc();
             blocks: [3],
             numericOnly: true
         });
+    });
+</script>
+<script>
+    // Function to load the countries data from the JSON file
+    function loadCountries() {
+        $.getJSON('countries+states+cities.json', function(countriesData) {
+            const countrySelect = $('#m_country');
+            // Populate the country dropdown
+            countriesData.forEach(country => {
+                countrySelect.append(new Option(country.name, country.name));
+            });
+
+            // Event listener for country change
+            countrySelect.on('change', function() {
+                const selectedCountry = $(this).val();
+                loadStates(countriesData, selectedCountry); // Load states for selected country
+            });
+        });
+    }
+
+    // Function to load states based on selected country
+    function loadStates(countriesData, selectedCountry) {
+        const stateSelect = $('#m_state');
+        const citySelect = $('#m_city');
+        stateSelect.empty().append('<option value="">Select State</option>'); // Clear states
+        citySelect.empty().append('<option value="">Select City</option>'); // Clear cities
+
+        const country = countriesData.find(c => c.name === selectedCountry);
+        if (country) {
+            // Populate the states dropdown based on selected country
+            country.states.forEach(state => {
+                stateSelect.append(new Option(state.name, state.name));
+            });
+
+            // Event listener for state change
+            stateSelect.on('change', function() {
+                const selectedState = $(this).val();
+                loadCities(country, selectedState); // Load cities for selected state
+            });
+        }
+    }
+
+    // Function to load cities based on selected state
+    function loadCities(country, selectedState) {
+        const citySelect = $('#m_city');
+        citySelect.empty().append('<option value="">Select City</option>'); // Clear cities
+
+        const state = country.states.find(s => s.name === selectedState);
+        if (state) {
+            // Populate the cities dropdown based on selected state
+            state.cities.forEach(city => {
+                citySelect.append(new Option(city.name, city.name));
+            });
+        }
+    }
+
+    // On document ready, load countries
+    $(document).ready(function() {
+        loadCountries(); // Load countries on page load
     });
 </script>
 <script src="static-frs/js/voucher.js"></script>
